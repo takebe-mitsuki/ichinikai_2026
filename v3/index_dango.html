@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>こねこねだんご班 | 教育学部祭 いちにかい企画</title>
@@ -82,39 +83,21 @@
                 </a>
             </li>
 
-        </ul>
+            <li class="header__menu-desktop-only">
 
-    </nav>
+                <div class="team-switcher">
 
-
-</header>
-
-
-<main>
-
-
-<section class="team-banner">
-
-    <div class="team-banner__nav">
-
-        <a href="index_main.html" class="team-banner__back">
-            ← トップページに戻る
-        </a>
+                    <button
+                        class="team-switcher__toggle"
+                        id="team-switcher-toggle"
+                        aria-expanded="false"
+                    >
+                        他の班
+                        <span class="team-switcher__icon">▾</span>
+                    </button>
 
 
-        <div class="team-switcher">
-
-            <button
-                class="team-switcher__toggle"
-                id="team-switcher-toggle"
-                aria-expanded="false"
-            >
-                他の班
-                <span class="team-switcher__icon">▾</span>
-            </button>
-
-
-            <ul class="team-switcher__menu" id="team-switcher-menu">
+                    <ul class="team-switcher__menu" id="team-switcher-menu">
 
             <li>
                 <a href="index_meat.html">
@@ -134,9 +117,52 @@
                 </a>
             </li>
 
-            </ul>
+                    </ul>
 
-        </div>
+                </div>
+
+            </li>
+
+            <li class="header__menu-mobile-only header__menu-divider">
+                ほかの班
+            </li>
+
+            <li class="header__menu-mobile-only">
+                <a href="index_meat.html">
+                    ぐらぐら肉じゃが班
+                </a>
+            </li>
+
+            <li class="header__menu-mobile-only">
+                <a href="index_tofu.html">
+                    純純純豆腐班
+                </a>
+            </li>
+
+            <li class="header__menu-mobile-only">
+                <a href="index_age.html">
+                    揚げバウム班
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+</header>
+
+
+<main>
+
+
+<section class="team-banner">
+
+    <div class="team-banner__nav">
+
+        <a href="index_main.html" class="team-banner__back">
+            ← トップページに戻る
+        </a>
 
     </div>
 
@@ -268,7 +294,7 @@
 
 <script>
     const TEAM_SLUG = "dango";
-    const TEAM_CATEGORY = "焼きだんご";
+    const TEAM_CATEGORY = "こねこねだんご";
 </script>
 <script src="js/main.js"></script>
 <script src="js/animation.js"></script>

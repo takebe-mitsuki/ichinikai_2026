@@ -1,0 +1,41 @@
+[
+    {
+        "role": "代表",
+        "name": "八田井瑞生",
+        "nickname": "みずき",
+        "image": "images/mizuki.jpg",
+        "description": "幸せになりましょう🫶"
+    },
+
+    {
+        "role": "副代表",
+        "name": "高橋恭",
+        "nickname": "きょう",
+        "image": "images/kyou.jpg",
+        "description": "ガチで高みを目指す"
+    },
+
+    {
+        "role": "副代表",
+        "name": "藤原真音",
+        "nickname": "まいん",
+        "image": "images/main.jpg",
+        "description": "回します"
+    },
+
+    {
+        "role": "副代表",
+        "name": "粟津陽太",
+        "nickname": "",
+        "image": "images/leaders/member04.jpg",
+        "description": "紹介文が入ります。"
+    },
+
+    {
+        "role": "副代表",
+        "name": "永井航太",
+        "nickname": "ながい",
+        "image": "images/nagai.jpg",
+        "description": "申し訳ないけど勝ちます"
+    }
+]

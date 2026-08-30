@@ -1,0 +1,685 @@
+/*
+========================================
+
+Team Page Template Style
+(白黒・シンプル。班ごとの色味は後日ここを上書きして決める想定)
+
+教育学部祭 いちにかい企画
+Ver.2
+
+========================================
+*/
+
+
+/* ================================
+   Color Override (モノクロ化)
+================================ */
+
+
+:root {
+
+    --color-bg: #FFFFFF;
+
+    --color-surface: #FFFFFF;
+
+    --color-text: #1A1A1A;
+
+    --color-text-light: #666666;
+
+    --color-border: #DDDDDD;
+
+    --color-accent: #1A1A1A;
+
+    --color-accent-dark: #000000;
+
+    --color-warm: #1A1A1A;
+
+    --color-warm-dark: #000000;
+
+    --color-mount-leaf: #F5F5F5;
+
+    --color-mount-crayon: #EFEFEF;
+
+}
+
+
+
+
+
+/* ================================
+   Section Zebra
+================================ */
+
+
+.section:nth-of-type(even) {
+
+    background: #FAFAFA;
+
+}
+
+
+
+
+
+/* ================================
+   Heading (波線→シンプルな下線に)
+================================ */
+
+
+.section__heading h2 {
+
+    text-decoration: none;
+
+    border-bottom: 3px solid var(--color-text);
+
+    padding-bottom: 10px;
+
+}
+
+
+
+
+
+/* ================================
+   Team Banner (ヘッダー直下の帯)
+================================ */
+
+
+.team-banner {
+
+    padding: 200px 24px 80px;
+
+    background: #1A1A1A;
+
+    color: #ffffff;
+
+    text-align: center;
+
+}
+
+
+
+.team-banner h1 {
+
+    font-size: clamp(36px, 6vw, 56px);
+
+    line-height: 1.3;
+
+}
+
+
+
+.team-banner__nav {
+
+    max-width: var(--max-width);
+
+    margin: 0 auto 24px;
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    text-align: left;
+
+}
+
+
+
+.team-banner__back {
+
+    display: inline-block;
+
+    font-size: 14px;
+
+    color: #ffffff;
+
+    opacity: 0.7;
+
+    transition: var(--transition-fast);
+
+}
+
+
+
+.team-banner__back:hover {
+
+    opacity: 1;
+
+}
+
+
+
+
+
+/* ================================
+   Team Switcher (他の班に切り替え)
+================================ */
+
+
+.team-switcher {
+
+    position: relative;
+
+}
+
+
+
+.team-switcher__toggle {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    padding: 0;
+
+    border: none;
+
+    background: none;
+
+    color: #ffffff;
+
+    font-family: var(--font-body);
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: var(--transition-fast);
+
+}
+
+
+
+.team-switcher__toggle:hover {
+
+    opacity: 0.7;
+
+}
+
+
+
+.team-switcher__icon {
+
+    font-size: 10px;
+
+    transition: transform 0.25s ease;
+
+}
+
+
+
+.team-switcher__toggle[aria-expanded="true"]
+
+.team-switcher__icon {
+
+    transform: rotate(180deg);
+
+}
+
+
+
+.team-switcher__menu {
+
+    position: absolute;
+
+    top: calc(100% + 8px);
+
+    right: 0;
+
+    min-width: 180px;
+
+    background: var(--color-surface);
+
+    border-radius: var(--radius-medium);
+
+    box-shadow: var(--shadow-medium);
+
+    padding: 8px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-8px);
+
+    transition: var(--transition-fast);
+
+    z-index: 50;
+
+    list-style: none;
+
+}
+
+
+
+.team-switcher__menu.is-open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+
+
+.team-switcher__menu li a {
+
+    display: block;
+
+    padding: 10px 14px;
+
+    border-radius: 8px;
+
+    color: var(--color-text);
+
+    font-size: 14px;
+
+}
+
+
+
+.team-switcher__menu li a:hover {
+
+    background: var(--color-mount-leaf);
+
+}
+
+
+
+
+
+/* ================================
+   News List (班ページは最大3件表示なので
+   メインページより低くする)
+================================ */
+
+
+.news__list {
+
+    min-height: 100px;
+
+}
+
+
+
+
+
+/* ================================
+   Team Leaders Grid
+================================ */
+
+
+.team-leaders__grid {
+
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 24px;
+
+    min-height: 320px;
+
+}
+
+
+
+.leader-card,
+.recipe-card {
+
+    border: 1px solid var(--color-border);
+
+}
+
+
+
+.leader-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow-medium);
+
+}
+
+
+
+.leader-card--main {
+
+    border-color: var(--color-accent);
+
+    border-width: 2px;
+
+}
+
+
+
+.leader-card--main:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: var(--shadow-medium);
+
+}
+
+
+
+
+
+/* ================================
+   Recipe
+================================ */
+
+
+.recipe__list {
+
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 32px;
+
+    min-height: 200px;
+
+}
+
+
+
+.recipe-card {
+
+    position: relative;
+
+    display: flex;
+
+    gap: 32px;
+
+    padding: 24px;
+
+    border-radius:
+
+        var(--radius-medium);
+
+    background: var(--color-surface);
+
+}
+
+
+
+
+
+/* ================================
+   Recipe Card Person
+   (人物の切り抜きをカードに重ねる)
+================================ */
+
+
+.recipe-card__person {
+
+    position: absolute;
+
+    right: -16px;
+
+    bottom: -24px;
+
+    height: 130%;
+
+    width: auto;
+
+    z-index: 5;
+
+    pointer-events: none;
+
+    filter:
+
+        drop-shadow(4px 8px 10px rgba(0,0,0,0.3));
+
+}
+
+
+
+.recipe-card img {
+
+    width: 280px;
+
+    flex-shrink: 0;
+
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
+}
+
+
+
+.recipe-card__body h3 {
+
+    font-size: 20px;
+
+    margin-bottom: 4px;
+
+}
+
+
+
+.recipe-card__section-title {
+
+    font-family: var(--font-heading);
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    color: var(--color-accent-dark);
+
+    margin-top: 18px;
+
+    margin-bottom: 8px;
+
+}
+
+
+
+.recipe-card__ingredients,
+.recipe-card__steps {
+
+    margin: 0;
+
+    padding-left: 0;
+
+    list-style: none;
+
+    color: var(--color-text-light);
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+}
+
+
+
+/* ================================
+   Ingredients (名前・分量を整列)
+================================ */
+
+
+.recipe-card__ingredients li {
+
+    display: grid;
+
+    grid-template-columns: 8em 1fr;
+
+    gap: 8px;
+
+    margin-bottom: 2px;
+
+}
+
+
+
+.recipe-card__ingredient-name {
+
+    color: var(--color-text);
+
+}
+
+
+
+.recipe-card__ingredient-amount {
+
+    color: var(--color-text-light);
+
+}
+
+
+
+
+
+/* ================================
+   Steps (独自の番号を表示)
+================================ */
+
+
+.recipe-card__steps {
+
+    counter-reset: recipe-step;
+
+}
+
+
+
+.recipe-card__steps li {
+
+    position: relative;
+
+    padding-left: 30px;
+
+    margin-bottom: 8px;
+
+    counter-increment: recipe-step;
+
+}
+
+
+
+.recipe-card__steps li::before {
+
+    content: counter(recipe-step) ".";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    font-family: var(--font-heading);
+
+    font-weight: 700;
+
+    font-size: 15px;
+
+    color: var(--color-accent-dark);
+
+}
+
+
+
+
+
+/* ================================
+   News Empty State
+================================ */
+
+
+.news__empty {
+
+    text-align: center;
+
+    color: var(--color-text-light);
+
+    padding: 40px 0;
+
+}
+
+
+
+
+
+/* ================================
+   Responsive
+================================ */
+
+
+@media(max-width: 900px){
+
+
+    .team-switcher {
+
+        display: none;
+
+    }
+
+
+}
+
+
+
+@media(max-width: 700px){
+
+
+    .recipe-card {
+
+        flex-direction: column;
+
+    }
+
+
+
+    .recipe-card img {
+
+        width: 100%;
+
+    }
+
+
+
+    .recipe-card__person {
+
+        position: static;
+
+        height: 200px;
+
+        width: auto;
+
+        margin: 12px auto 0;
+
+        display: block;
+
+        filter:
+
+            drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+
+    }
+
+
+}

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>こねこねだんご班 | 教育学部祭 いちにかい企画</title>
+
+    <meta
+        name="description"
+        content="京都大学教育学部祭 いちにかい企画 こねこねだんご班のページです。"
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700;900&family=Yomogi&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/team_template.css">
+    <link rel="stylesheet" href="css/team_dango.css">
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+    <nav class="header__nav">
+
+        <a href="index_main.html" class="header__logo">
+            教育学部祭<br>
+            いちにかい企画
+        </a>
+
+
+        <button
+            class="header__toggle"
+            id="header-toggle"
+            aria-label="メニューを開く"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+
+        <ul class="header__menu" id="header-menu">
+
+            <li>
+                <a href="#news">
+                    お知らせ
+                </a>
+            </li>
+
+            <li>
+                <a href="#leaders">
+                    班長・副班長紹介
+                </a>
+            </li>
+
+            <li>
+                <a href="#recipe">
+                    レシピ
+                </a>
+            </li>
+
+            <li>
+                <a href="index_main.html">
+                    トップページ
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+</header>
+
+
+<main>
+
+
+<section class="team-banner">
+
+    <div class="team-banner__nav">
+
+        <a href="index_main.html" class="team-banner__back">
+            ← トップページに戻る
+        </a>
+
+
+        <div class="team-switcher">
+
+            <button
+                class="team-switcher__toggle"
+                id="team-switcher-toggle"
+                aria-expanded="false"
+            >
+                他の班
+                <span class="team-switcher__icon">▾</span>
+            </button>
+
+
+            <ul class="team-switcher__menu" id="team-switcher-menu">
+
+            <li>
+                <a href="index_meat.html">
+                    ぐらぐら肉じゃが班
+                </a>
+            </li>
+
+            <li>
+                <a href="index_tofu.html">
+                    純純純豆腐班
+                </a>
+            </li>
+
+            <li>
+                <a href="index_age.html">
+                    揚げバウム班
+                </a>
+            </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <h1>
+        こねこねだんご班
+    </h1>
+
+</section>
+
+
+
+<section id="news" class="section">
+
+    <div class="section__heading">
+
+        <h2>
+            お知らせ
+        </h2>
+
+    </div>
+
+
+    <div class="news__list" id="news-list">
+
+    </div>
+
+
+    <div class="news__more">
+
+        <a href="news.html?category=%E7%84%BC%E3%81%8D%E3%81%A0%E3%82%93%E3%81%94" class="news__more-link">
+            お知らせ一覧を見る
+        </a>
+
+    </div>
+
+
+</section>
+
+
+
+<section id="leaders" class="section">
+
+    <div class="section__heading">
+
+        <h2>
+            班長・副班長紹介
+        </h2>
+
+    </div>
+
+
+    <div class="team-leaders__grid" id="leaders-list">
+
+    </div>
+
+
+</section>
+
+
+
+<section id="recipe" class="section">
+
+    <div class="section__heading">
+
+        <h2>
+            レシピ
+        </h2>
+
+    </div>
+
+
+    <div class="recipe__list" id="recipe-list">
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+<div class="news-modal" id="news-modal">
+
+    <div class="news-modal__content">
+
+        <button
+            class="news-modal__close"
+            id="news-modal-close"
+        >
+            ×
+        </button>
+
+
+        <p class="news-modal__category">
+        </p>
+
+
+        <h2 class="news-modal__title">
+        </h2>
+
+
+        <p class="news-modal__date">
+        </p>
+
+
+        <p class="news-modal__text">
+        </p>
+
+
+    </div>
+
+</div>
+
+
+
+<footer class="footer">
+
+    <p>
+        教育学部祭 いちにかい企画
+    </p>
+
+
+</footer>
+
+
+
+
+<script>
+    const TEAM_SLUG = "dango";
+    const TEAM_CATEGORY = "焼きだんご";
+</script>
+<script src="js/main.js"></script>
+<script src="js/animation.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/team_news.js"></script>
+<script src="js/team_leaders.js"></script>
+<script src="js/team_recipe.js"></script>
+
+
+</body>
+</html>

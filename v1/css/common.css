@@ -1,0 +1,445 @@
+/* =========================================
+   Common CSS
+   教育学部祭 いちにかい企画
+========================================= */
+
+
+/* =========================================
+   CSS Variables
+========================================= */
+
+:root {
+
+    /* Main Color */
+    --main-green: #8fcf8f;
+    --dark-green: #4f8f5a;
+    --light-green: #eaf7ea;
+
+    /* Accent */
+    --accent-yellow: #f7d774;
+
+    /* Text */
+    --text-color: #333333;
+    --sub-text: #666666;
+
+    /* Background */
+    --background: #ffffff;
+    --section-background: #f8fbf8;
+
+    /* Shadow */
+    --shadow:
+        0 10px 30px rgba(0,0,0,0.08);
+
+
+    /* Radius */
+
+    --radius-small: 10px;
+    --radius-medium: 20px;
+    --radius-large: 40px;
+
+
+    /* Transition */
+
+    --transition:
+        0.3s ease;
+
+
+}
+
+
+
+
+
+/* =========================================
+   Reset
+========================================= */
+
+
+*,
+*::before,
+*::after {
+
+    box-sizing:
+        border-box;
+
+}
+
+
+
+html {
+
+    scroll-behavior:
+        smooth;
+
+    font-size:
+        16px;
+
+}
+
+
+
+body {
+
+    margin:
+        0;
+
+    padding:
+        0;
+
+    font-family:
+        "Noto Sans JP",
+        sans-serif;
+
+    color:
+        var(--text-color);
+
+    background:
+        var(--background);
+
+    line-height:
+        1.8;
+
+}
+
+
+
+img {
+
+    max-width:
+        100%;
+
+    height:
+        auto;
+
+    display:
+        block;
+
+}
+
+
+
+a {
+
+    color:
+        inherit;
+
+    text-decoration:
+        none;
+
+}
+
+
+
+ul {
+
+    list-style:
+        none;
+
+    padding:
+        0;
+
+    margin:
+        0;
+
+}
+
+
+
+h1,
+h2,
+h3,
+p {
+
+    margin:
+        0;
+
+}
+
+
+
+
+
+/* =========================================
+   Layout
+========================================= */
+
+
+.section {
+
+    width:
+        min(1200px, 90%);
+
+    margin:
+        0 auto;
+
+    padding:
+        100px 0;
+
+}
+
+
+
+.section-title {
+
+    text-align:
+        center;
+
+    margin-bottom:
+        60px;
+
+}
+
+
+
+.section-title span {
+
+    display:
+        block;
+
+    color:
+        var(--dark-green);
+
+    font-size:
+        0.9rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.2em;
+
+    margin-bottom:
+        10px;
+
+}
+
+
+
+.section-title h2 {
+
+    font-size:
+        clamp(2rem, 4vw, 3rem);
+
+    font-weight:
+        900;
+
+    position:
+        relative;
+
+}
+
+
+
+.section-title h2::after {
+
+    content:
+        "";
+
+    display:
+        block;
+
+    width:
+        60px;
+
+    height:
+        4px;
+
+    background:
+        var(--main-green);
+
+    border-radius:
+        10px;
+
+    margin:
+        20px auto 0;
+
+}
+
+
+
+
+
+/* =========================================
+   Cards
+========================================= */
+
+
+.card {
+
+    background:
+        white;
+
+    border-radius:
+        var(--radius-medium);
+
+    box-shadow:
+        var(--shadow);
+
+    overflow:
+        hidden;
+
+    transition:
+        var(--transition);
+
+}
+
+
+
+.card:hover {
+
+    transform:
+        translateY(-8px);
+
+}
+
+
+
+
+
+/* =========================================
+   Buttons
+========================================= */
+
+
+.button {
+
+    display:
+        inline-flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    padding:
+        12px 30px;
+
+    border-radius:
+        999px;
+
+    background:
+        var(--dark-green);
+
+    color:
+        white;
+
+    font-weight:
+        700;
+
+    transition:
+        var(--transition);
+
+}
+
+
+
+.button:hover {
+
+    opacity:
+        0.8;
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+
+
+
+/* =========================================
+   Animation
+========================================= */
+
+
+.fade-in {
+
+    opacity:
+        0;
+
+    transform:
+        translateY(30px);
+
+    transition:
+        0.8s ease;
+
+}
+
+
+
+.fade-in.active {
+
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+
+
+
+/* =========================================
+   Footer
+========================================= */
+
+
+footer {
+
+    background:
+        var(--dark-green);
+
+    color:
+        white;
+
+    text-align:
+        center;
+
+    padding:
+        30px 0;
+
+    font-size:
+        0.9rem;
+
+}
+
+
+
+
+
+/* =========================================
+   Responsive
+========================================= */
+
+
+@media screen and (max-width:768px) {
+
+
+    html {
+
+        font-size:
+            14px;
+
+    }
+
+
+    .section {
+
+        padding:
+            70px 0;
+
+    }
+
+
+    .section-title {
+
+        margin-bottom:
+            40px;
+
+    }
+
+
+}

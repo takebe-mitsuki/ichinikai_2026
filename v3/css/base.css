@@ -1,0 +1,290 @@
+/*
+========================================
+Base Style
+
+教育学部祭 いちにかい企画
+Ver.2
+
+========================================
+*/
+
+
+/* ================================
+   CSS Variables
+================================ */
+
+
+:root {
+
+    /* Color */
+
+    --color-bg: #FBF6EA;
+
+    --color-surface: #FFFFFF;
+
+    --color-text: #20301B;
+
+    --color-text-light: #5C6B52;
+
+    --color-border: #EFE8D8;
+
+    --color-accent: #74C948;
+
+    --color-accent-dark: #3E7A22;
+
+    /* Crayon Accent */
+
+    --color-warm: #F2984A;
+
+    --color-warm-dark: #D97B2E;
+
+    /* Card Mount (台紙) */
+
+    --color-mount-leaf: #EAF6E0;
+
+    --color-mount-crayon: #FCEBD8;
+
+
+
+    /* Font */
+
+    --font-body:
+        "Noto Sans JP",
+        sans-serif;
+
+    --font-heading:
+        "Zen Maru Gothic",
+        sans-serif;
+
+    --font-hand:
+        "Yomogi",
+        cursive;
+
+
+
+    /* Shadow */
+
+    --shadow-small:
+        0 8px 20px rgba(0, 0, 0, 0.06);
+
+
+    --shadow-medium:
+        0 16px 40px rgba(0, 0, 0, 0.08);
+
+
+
+    /* Radius */
+
+    --radius-small: 8px;
+
+    --radius-medium: 16px;
+
+    --radius-large: 24px;
+
+
+
+    /* Layout */
+
+    --max-width: 1200px;
+
+    --section-space: 140px;
+
+
+
+    /* Transition */
+
+    --transition-fast:
+        0.25s ease;
+
+
+    --transition-normal:
+        0.45s ease;
+
+}
+
+
+
+
+
+/* ================================
+   Reset
+================================ */
+
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+
+}
+
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    background-color:
+        var(--color-bg);
+
+    color:
+        var(--color-text);
+
+    font-family:
+        var(--font-body);
+
+
+    line-height: 1.8;
+
+    letter-spacing: 0.04em;
+
+    overflow-x: hidden;
+
+}
+
+
+
+
+
+/* ================================
+   Typography
+================================ */
+
+
+h1,
+h2,
+h3,
+h4,
+p {
+
+    margin: 0;
+
+}
+
+
+
+h1,
+h2,
+h3 {
+
+    font-family: var(--font-heading);
+
+    font-weight: 700;
+
+}
+
+
+
+p {
+
+    font-size: 16px;
+
+}
+
+
+
+
+
+/* ================================
+   Link
+================================ */
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+
+
+
+/* ================================
+   Image
+================================ */
+
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
+
+
+
+
+/* ================================
+   List
+================================ */
+
+
+ul,
+ol {
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+
+
+
+/* ================================
+   Button
+================================ */
+
+
+button {
+
+    border: none;
+
+    background: none;
+
+    padding: 0;
+
+    font: inherit;
+
+    cursor: pointer;
+
+}
+
+
+
+
+
+/* ================================
+   Selection
+================================ */
+
+
+::selection {
+
+    background-color:
+        var(--color-accent);
+
+    color: #ffffff;
+
+}

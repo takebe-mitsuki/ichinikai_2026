@@ -1,0 +1,204 @@
+/* =========================================
+   index_tofu.css
+   すんどぅゔ班 Style
+========================================= */
+
+
+/* =========================================
+   Theme Color
+========================================= */
+
+
+:root {
+
+    --tofu-main:
+        #d94f45;
+
+    --tofu-light:
+        #fff0ed;
+
+    --tofu-dark:
+        #7d211c;
+
+}
+
+
+
+
+
+/* =========================================
+   Hero
+========================================= */
+
+
+.team-hero {
+
+    background-image:
+        url("../images/teams/tofu-header.jpg");
+
+}
+
+
+
+.team-hero-content h1 {
+
+    text-shadow:
+        0 4px 15px rgba(0,0,0,0.45);
+
+}
+
+
+
+
+
+/* =========================================
+   Section Title
+========================================= */
+
+
+.section-title span {
+
+    color:
+        var(--tofu-main);
+
+}
+
+
+
+.section-title h2::after {
+
+    background:
+        var(--tofu-main);
+
+}
+
+
+
+
+
+/* =========================================
+   News
+========================================= */
+
+
+.team-news-card {
+
+    border-left:
+        6px solid var(--tofu-main);
+
+}
+
+
+
+.team-news-card h3 {
+
+    color:
+        var(--tofu-dark);
+
+}
+
+
+
+
+
+/* =========================================
+   Member
+========================================= */
+
+
+.member-card {
+
+    border-top:
+        5px solid var(--tofu-main);
+
+}
+
+
+
+.member-role {
+
+    color:
+        var(--tofu-main);
+
+}
+
+
+
+
+
+/* =========================================
+   Recipe
+========================================= */
+
+
+.recipe-section {
+
+    background:
+        var(--tofu-light);
+
+}
+
+
+
+.recipe-content h3 {
+
+    color:
+        var(--tofu-dark);
+
+}
+
+
+
+.recipe-content li {
+
+    margin-bottom:
+        12px;
+
+}
+
+
+
+
+
+/* =========================================
+   Decorative
+========================================= */
+
+
+.recipe-content::before {
+
+    content:
+        "🌶️";
+
+    font-size:
+        2rem;
+
+    display:
+        block;
+
+    margin-bottom:
+        10px;
+
+}
+
+
+
+
+
+/* =========================================
+   Responsive
+========================================= */
+
+
+@media screen and (max-width:600px){
+
+
+    .team-hero h1 {
+
+        font-size:
+            2.8rem;
+
+    }
+
+
+}

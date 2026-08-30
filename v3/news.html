@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>お知らせ一覧 | 教育学部祭 いちにかい企画</title>
+
+    <meta
+        name="description"
+        content="京都大学教育学部祭 いちにかい企画のお知らせ一覧です。"
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Yomogi&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/news.css">
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+    <nav class="header__nav">
+
+        <a href="index_main.html" class="header__logo">
+            教育学部祭<br>
+            いちにかい企画
+        </a>
+
+
+        <button
+            class="header__toggle"
+            id="header-toggle"
+            aria-label="メニューを開く"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+
+        <ul class="header__menu" id="header-menu">
+
+            <li>
+                <a href="index_main.html#news">
+                    お知らせ
+                </a>
+            </li>
+
+            <li>
+                <a href="index_main.html#about">
+                    概要
+                </a>
+            </li>
+
+            <li>
+                <a href="index_main.html#schedule">
+                    スケジュール
+                </a>
+            </li>
+
+            <li>
+                <a href="index_main.html#leaders">
+                    代表紹介
+                </a>
+            </li>
+
+            <li>
+                <a href="index_main.html#teams">
+                    班紹介
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+</header>
+
+
+
+
+
+<main>
+
+
+<section id="news-page" class="section news-page section--no-hero">
+
+
+    <a href="index_main.html" class="news-page__back" id="news-page-back">
+        ← トップページに戻る
+    </a>
+
+
+    <div class="section__heading">
+
+        <h2 id="news-page-heading">
+            お知らせ一覧
+        </h2>
+
+    </div>
+
+
+
+    <div class="news__list" id="news-list-all">
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+<div class="news-modal" id="news-modal">
+
+    <div class="news-modal__content">
+
+        <button
+            class="news-modal__close"
+            id="news-modal-close"
+        >
+            ×
+        </button>
+
+
+        <p class="news-modal__category">
+        </p>
+
+
+        <h2 class="news-modal__title">
+        </h2>
+
+
+        <p class="news-modal__date">
+        </p>
+
+
+        <p class="news-modal__text">
+        </p>
+
+
+    </div>
+
+</div>
+
+
+
+<footer class="footer">
+
+    <p>
+        教育学部祭 いちにかい企画
+    </p>
+
+
+</footer>
+
+
+
+
+
+<script src="js/main.js"></script>
+<script src="js/animation.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/news_list.js"></script>
+
+
+
+
+</body>
+</html>

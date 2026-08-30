@@ -1,0 +1,39 @@
+/*
+========================================
+
+News List Page Style
+
+教育学部祭 いちにかい企画
+Ver.2
+
+========================================
+*/
+
+
+.news-page__back {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-bottom: 40px;
+
+    color: var(--color-accent-dark);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: var(--transition-fast);
+
+}
+
+
+
+.news-page__back:hover {
+
+    opacity: 0.7;
+
+}

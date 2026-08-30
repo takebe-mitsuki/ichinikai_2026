@@ -1,0 +1,781 @@
+/* =========================================
+   index_main.css
+   Main Page Style
+========================================= */
+
+
+/* =========================================
+   Hero
+========================================= */
+
+.hero {
+
+    height:
+        100vh;
+
+    min-height:
+        650px;
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background-image:
+        url("../images/header/main01.jpg");
+
+    background-size:
+        cover;
+
+    background-position:
+        center;
+
+    overflow:
+        hidden;
+
+}
+
+
+/* 背景画像切替用 */
+
+.hero::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background-size:
+        cover;
+
+    background-position:
+        center;
+
+    animation:
+        heroSlide 18s infinite;
+
+    z-index:
+        0;
+
+}
+
+
+
+@keyframes heroSlide {
+
+
+    0% {
+
+        background-image:
+            url("../images/header/main01.jpg");
+
+    }
+
+
+    33% {
+
+        background-image:
+            url("../images/header/main02.jpg");
+
+    }
+
+
+    66% {
+
+        background-image:
+            url("../images/header/main03.jpg");
+
+    }
+
+
+    100% {
+
+        background-image:
+            url("../images/header/main01.jpg");
+
+    }
+
+
+}
+
+
+
+.hero-overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.25),
+            rgba(0,0,0,0.45)
+        );
+
+    z-index:
+        1;
+
+}
+
+
+
+
+
+/* =========================================
+   Header Navigation
+========================================= */
+
+
+.header-nav {
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        100%;
+
+    padding:
+        25px 5%;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    z-index:
+        10;
+
+    color:
+        white;
+
+}
+
+
+
+.logo {
+
+    font-size:
+        1.4rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        0.08em;
+
+}
+
+
+
+.nav-menu {
+
+    display:
+        flex;
+
+    gap:
+        30px;
+
+}
+
+
+
+.nav-menu a {
+
+    font-weight:
+        700;
+
+    transition:
+        0.3s;
+
+}
+
+
+
+.nav-menu a:hover {
+
+    opacity:
+        0.7;
+
+}
+
+
+
+
+
+/* =========================================
+   Hero Content
+========================================= */
+
+
+.hero-content {
+
+    position:
+        relative;
+
+    z-index:
+        5;
+
+    color:
+        white;
+
+    text-align:
+        center;
+
+}
+
+
+
+.hero-subtitle {
+
+    font-size:
+        1.5rem;
+
+    letter-spacing:
+        0.3em;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+
+.hero-content h1 {
+
+    font-size:
+        clamp(3rem,8vw,6rem);
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        0.1em;
+
+}
+
+
+
+.hero-date {
+
+    margin-top:
+        30px;
+
+    font-size:
+        2rem;
+
+    font-weight:
+        700;
+
+}
+
+
+
+
+
+/* =========================================
+   News
+========================================= */
+
+
+.news-section {
+
+    background:
+        white;
+
+}
+
+
+
+.news-container {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:
+        30px;
+
+}
+
+
+
+.news-card {
+
+    padding:
+        30px;
+
+    background:
+        white;
+
+    border-radius:
+        var(--radius-medium);
+
+    box-shadow:
+        var(--shadow);
+
+    transition:
+        var(--transition);
+
+    cursor:
+        pointer;
+
+}
+
+
+
+.news-card:hover {
+
+    transform:
+        translateY(-8px);
+
+}
+
+
+
+.news-meta {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+
+.category {
+
+    padding:
+        5px 15px;
+
+    border-radius:
+        999px;
+
+    font-size:
+        0.8rem;
+
+    background:
+        var(--light-green);
+
+    color:
+        var(--dark-green);
+
+}
+
+
+
+.news-card h3 {
+
+    font-size:
+        1.2rem;
+
+}
+
+
+
+
+
+/* =========================================
+   About
+========================================= */
+
+
+.about-section {
+
+    background:
+        var(--section-background);
+
+}
+
+
+
+.about-box {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:
+        40px;
+
+}
+
+
+
+.about-item {
+
+    background:
+        white;
+
+    padding:
+        40px;
+
+    border-radius:
+        var(--radius-medium);
+
+    box-shadow:
+        var(--shadow);
+
+}
+
+
+
+.about-item h3 {
+
+    color:
+        var(--dark-green);
+
+    margin-bottom:
+        20px;
+
+}
+
+
+
+
+
+/* =========================================
+   Schedule
+========================================= */
+
+
+.schedule-table {
+
+    border-radius:
+        var(--radius-medium);
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        var(--shadow);
+
+}
+
+
+
+.schedule-row {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        200px 1fr;
+
+    background:
+        white;
+
+    border-bottom:
+        1px solid #eee;
+
+}
+
+
+
+.schedule-row span {
+
+    padding:
+        20px;
+
+}
+
+
+
+
+
+/* =========================================
+   Leaders
+========================================= */
+
+
+.leaders-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(5,1fr);
+
+    gap:
+        25px;
+
+}
+
+
+
+.leader-card {
+
+    text-align:
+        center;
+
+    padding:
+        25px;
+
+    background:
+        white;
+
+    border-radius:
+        var(--radius-medium);
+
+    box-shadow:
+        var(--shadow);
+
+}
+
+
+
+.leader-card img {
+
+    width:
+        140px;
+
+    height:
+        140px;
+
+    object-fit:
+        cover;
+
+    border-radius:
+        50%;
+
+    margin:
+        20px auto;
+
+}
+
+
+
+.position {
+
+    font-weight:
+        700;
+
+    color:
+        var(--dark-green);
+
+}
+
+
+
+.position.main {
+
+    color:
+        #d49b00;
+
+}
+
+
+
+
+
+/* =========================================
+   Teams
+========================================= */
+
+
+.team-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:
+        30px;
+
+}
+
+
+
+.team-card {
+
+    background:
+        white;
+
+    border-radius:
+        var(--radius-medium);
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        var(--shadow);
+
+    transition:
+        var(--transition);
+
+}
+
+
+
+.team-card:hover {
+
+    transform:
+        translateY(-10px);
+
+}
+
+
+
+.team-card img {
+
+    width:
+        100%;
+
+    height:
+        230px;
+
+    object-fit:
+        cover;
+
+}
+
+
+
+.team-card h3,
+.team-card p {
+
+    padding:
+        15px 20px 0;
+
+}
+
+
+
+.team-card p {
+
+    padding-bottom:
+        25px;
+
+    color:
+        var(--sub-text);
+
+}
+
+
+
+
+
+/* =========================================
+   Responsive
+========================================= */
+
+
+@media screen and (max-width:900px){
+
+
+    .nav-menu {
+
+        display:
+            none;
+
+    }
+
+
+    .news-container {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .about-box {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .leaders-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+
+    .team-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+
+}
+
+
+
+@media screen and (max-width:600px){
+
+
+    .hero {
+
+        min-height:
+            550px;
+
+    }
+
+
+    .leaders-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .team-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .schedule-row {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+}

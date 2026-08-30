@@ -1,0 +1,38 @@
+[
+    {
+        "role": "班長",
+        "name": "伊藤菜那子",
+        "nickname": "ななこっこ",
+        "image": "images/nanakokko.jpg",
+        "description": "一緒にいーっぱい食べましょ？？"
+    },
+
+    {
+        "role": "副班長",
+        "name": "谷寛樹",
+        "nickname": "ひろき/たに（くん）　等",
+        "image": "images/tani.jpg",
+        "description": "我々で皆を幸せにします"
+    },
+    {
+        "role": "副班長",
+        "name": "緒方暖飛",
+        "nickname": "おがはる",
+        "image": "images/ogaharu.jpg",
+        "description": "내가 한국을 뛰어넘겠다"
+    },
+    {
+        "role": "副班長",
+        "name": "小岩奏太",
+        "nickname": "そうた",
+        "image": "images/souta.jpg",
+        "description": "スンドゥブのスンです。"
+    },
+    {
+        "role": "副班長",
+        "name": "白井湧己",
+        "nickname": "",
+        "image": "images/leaders/tofu05.jpg",
+        "description": "紹介文が入ります。"
+    }
+]

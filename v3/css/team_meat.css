@@ -1,0 +1,138 @@
+/*
+========================================
+
+Team Style: 肉じゃが班
+(焦げ茶色ベース・オレンジ&黄色の差し色)
+
+教育学部祭 いちにかい企画
+Ver.2
+
+========================================
+*/
+
+
+/* ================================
+   Color Override (ダークテーマ)
+================================ */
+
+
+:root {
+
+    --color-bg: #2A1810;
+
+    --color-surface: #3D2718;
+
+    --color-text: #F5C56B;
+
+    --color-text-light: #D9A66B;
+
+    --color-border: #5C3D22;
+
+    --color-accent: #F2932E;
+
+    --color-accent-dark: #C96A1B;
+
+    --color-warm: #F2C43D;
+
+    --color-warm-dark: #C99A2E;
+
+    --color-mount-leaf: #4A311D;
+
+    --color-mount-crayon: #573A22;
+
+}
+
+
+
+
+
+/* ================================
+   Section Zebra
+================================ */
+
+
+.section:nth-of-type(even) {
+
+    background: #331F13;
+
+}
+
+
+
+
+
+/* ================================
+   Heading (具材の角切りマーク)
+================================ */
+
+
+.section__heading h2::before {
+
+    content: "";
+
+    display: inline-block;
+
+    width: 36px;
+
+    height: 31px;
+
+    margin-right: 8px;
+
+    vertical-align: middle;
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-image:
+
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 70'%3E%3Cpath d='M30 14 Q26 8 30 2' stroke='%23F5C56B' stroke-width='2' fill='none' opacity='0.5' stroke-linecap='round'/%3E%3Cpath d='M50 14 Q46 8 50 2' stroke='%23F5C56B' stroke-width='2' fill='none' opacity='0.5' stroke-linecap='round'/%3E%3Cpath d='M8 32 L72 32 L62 64 L18 64 Z' fill='%234A2F1C'/%3E%3Cellipse cx='40' cy='32' rx='32' ry='9' fill='%23C96A1B'/%3E%3Ccircle cx='28' cy='28' r='7' fill='%23E8C27A'/%3E%3Cpolygon points='48,22 56,26 50,32' fill='%23F2932E'/%3E%3Crect x='36' y='24' width='10' height='8' rx='2' fill='%237C4A2A'/%3E%3Ccircle cx='44' cy='20' r='2' fill='%234C9A5B'/%3E%3Ccircle cx='50' cy='18' r='2' fill='%234C9A5B'/%3E%3C/svg%3E");
+
+}
+
+
+
+
+
+/* ================================
+   Team Banner
+================================ */
+
+
+.team-banner {
+
+    background:
+
+        linear-gradient(
+
+            160deg,
+
+            #2A1810 0%,
+            #4A2F1C 55%,
+            #5C3D22 100%
+
+        );
+
+}
+
+
+
+.team-banner h1 {
+
+    color: #F5C56B;
+
+    text-shadow:
+
+        0 4px 16px
+
+        rgba(0,0,0,0.4);
+
+}
+
+
+
+.team-banner__back {
+
+    color: #F2C43D;
+
+}

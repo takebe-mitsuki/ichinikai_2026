@@ -1,0 +1,38 @@
+[
+    {
+        "role": "班長",
+        "name": "田村典",
+        "nickname": "てん",
+        "image": "images/ten.jpg",
+        "description": "ほんまに肉じゃがすごいやで～！"
+    },
+
+    {
+        "role": "副班長",
+        "name": "間瀬孝太郎",
+        "nickname": "ませこう",
+        "image": "images/masekou.jpg",
+        "description": "|　　　　　　|<br>|　　　　　　|<br>|🥕🍖🥔🧅|<br>L_________」<br>🔥🔥🔥"
+    },
+    {
+        "role": "副班長",
+        "name": "武部光希",
+        "nickname": "べ～ちゃん",
+        "image": "images/takebe.jpg",
+        "description": "温かい肉じゃがを作ります🥔"
+    },
+    {
+        "role": "副班長",
+        "name": "藤原舞衣",
+        "nickname": "",
+        "image": "images/leaders/meat04.jpg",
+        "description": "紹介文が入ります。"
+    },
+    {
+        "role": "副班長",
+        "name": "山本晄広",
+        "nickname": "あっきー",
+        "image": "images/akki-.jpg",
+        "description": "怪我なく頑張ります"
+    }
+]

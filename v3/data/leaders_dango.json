@@ -1,0 +1,39 @@
+[
+    {
+        "role": "班長",
+        "name": "山田陽菜",
+        "nickname": "やまはる",
+        "image": "images/yamaharu.jpg",
+        "description": "だんごこねこね大臣として後進の育成にも力を入れています"
+    },
+
+    {
+        "role": "副班長",
+        "name": "山本陽人",
+        "nickname": "うみーん",
+        "image": "images/umi-nn.jpg",
+        "description": "こねこね副大臣として次世代の活躍を推進しています"
+    },
+    
+    {
+        "role": "副班長",
+        "name": "井上桔平",
+        "nickname": "きっぺー",
+        "image": "images/kippe-.jpg",
+        "description": "めっちゃ団子するよー"
+    },
+    {
+        "role": "副班長",
+        "name": "中川楓太",
+        "nickname": "ふうた",
+        "image": "images/fuuta.jpg",
+        "description": "おいしいお団子でみんなの笑顔を増やしましょう☺️"
+    },
+    {
+        "role": "副班長",
+        "name": "藤谷道弥",
+        "nickname": "みちや",
+        "image": "images/mitiya.jpg",
+        "description": "無理せず団子作るよ"
+    }
+]

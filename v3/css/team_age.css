@@ -1,0 +1,207 @@
+/*
+========================================
+
+Team Style: 揚げバウム班
+(黄色ベース・バウムクーヘンの層モチーフ)
+
+教育学部祭 いちにかい企画
+Ver.2
+
+========================================
+*/
+
+
+/* ================================
+   Color Override
+================================ */
+
+
+:root {
+
+    --color-bg: #FFFBF0;
+
+    --color-surface: #FFFFFF;
+
+    --color-text: #6B5233;
+
+    --color-text-light: #9C8563;
+
+    --color-border: #F3E6C8;
+
+    --color-accent: #F5C873;
+
+    --color-accent-dark: #C99A4E;
+
+    --color-warm: #E8A25C;
+
+    --color-warm-dark: #B97B3E;
+
+    --color-mount-leaf: #FDF3DC;
+
+    --color-mount-crayon: #FAEBCB;
+
+}
+
+
+
+
+
+/* ================================
+   Section Zebra
+================================ */
+
+
+.section:nth-of-type(even) {
+
+    background-color: #FCF1DC;
+
+    background-image:
+
+        repeating-linear-gradient(
+
+            180deg,
+
+            rgba(184,138,78,0.05) 0px,
+            rgba(184,138,78,0.05) 2px,
+            transparent 2px,
+            transparent 36px
+
+        );
+
+
+    background-attachment: fixed;
+
+}
+
+
+
+
+
+/* ================================
+   Page Background (うっすら層)
+================================ */
+
+
+body {
+
+    background-color: var(--color-bg);
+
+    background-image:
+
+        repeating-linear-gradient(
+
+            180deg,
+
+            rgba(184,138,78,0.05) 0px,
+            rgba(184,138,78,0.05) 2px,
+            transparent 2px,
+            transparent 36px
+
+        );
+
+
+    background-attachment: fixed;
+
+}
+
+
+
+
+
+/* ================================
+   Heading (バウムの輪っかマーク)
+================================ */
+
+
+.section__heading h2 {
+
+    border-bottom-color: var(--color-accent-dark);
+
+}
+
+
+
+.section__heading h2::before {
+
+    content: "";
+
+    display: inline-block;
+
+    width: 22px;
+
+    height: 22px;
+
+    margin-right: 8px;
+
+    border-radius: 50%;
+
+    vertical-align: middle;
+
+    background:
+
+        repeating-radial-gradient(
+
+            circle at center,
+
+            var(--color-accent-dark) 0,
+            var(--color-accent-dark) 2px,
+            var(--color-accent) 2px,
+            var(--color-accent) 4px,
+            var(--color-accent-dark) 4px,
+            var(--color-accent-dark) 6px,
+            var(--color-mount-crayon) 6px,
+            var(--color-mount-crayon) 8px
+
+        );
+
+}
+
+
+
+
+
+/* ================================
+   Team Banner (バウムクーヘンの輪切り)
+================================ */
+
+
+.team-banner {
+
+    background:
+
+        repeating-linear-gradient(
+
+            180deg,
+
+            #C99A4E 0px,
+            #C99A4E 14px,
+            #E8C27A 14px,
+            #E8C27A 28px,
+            #FAE3B0 28px,
+            #FAE3B0 42px
+
+        );
+
+}
+
+
+
+.team-banner h1 {
+
+    color: #4A2E14;
+
+    text-shadow:
+
+        0 2px 10px
+
+        rgba(255,255,255,0.4);
+
+}
+
+
+
+.team-banner__back {
+
+    color: #4A2E14;
+
+}

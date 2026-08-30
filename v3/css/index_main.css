@@ -1,0 +1,432 @@
+/*
+========================================
+
+Index Main Style
+(メインページ固有の装飾のみ)
+
+教育学部祭 いちにかい企画
+Ver.2
+
+========================================
+*/
+
+
+/* ================================
+   Hero
+================================ */
+
+
+.hero__background img {
+
+    animation:
+
+        heroZoom
+
+        15s
+
+        ease-in-out
+
+        infinite
+
+        alternate;
+
+}
+
+
+
+@keyframes heroZoom {
+
+
+    from {
+
+        transform:
+
+            scale(1);
+
+    }
+
+
+
+    to {
+
+        transform:
+
+            scale(1.08);
+
+    }
+
+}
+
+
+
+
+
+.hero__title {
+
+    text-shadow:
+
+        0 4px 20px
+
+        rgba(0,0,0,0.25);
+
+}
+
+
+
+.hero__scroll span {
+
+    display:
+
+        inline-block;
+
+
+    animation:
+
+        scrollMove
+
+        1.8s
+
+        infinite;
+
+}
+
+
+
+@keyframes scrollMove {
+
+
+    0% {
+
+        transform:
+
+            translateY(0);
+
+        opacity:
+
+            1;
+
+    }
+
+
+
+    50% {
+
+        transform:
+
+            translateY(8px);
+
+        opacity:
+
+            0.5;
+
+    }
+
+
+
+    100% {
+
+        transform:
+
+            translateY(0);
+
+        opacity:
+
+            1;
+
+    }
+
+
+}
+
+
+
+
+
+/* ================================
+   Section Background
+================================ */
+
+
+.news {
+
+    background:
+
+        var(--color-bg);
+
+}
+
+
+
+.about {
+
+    background:
+
+        #F3F6EE;
+
+}
+
+
+
+.schedule {
+
+    background:
+
+        var(--color-bg);
+
+}
+
+
+
+.leaders {
+
+    background:
+
+        #F3F6EE;
+
+}
+
+
+
+.teams {
+
+    background:
+
+        var(--color-bg);
+
+}
+
+
+
+
+
+/* ================================
+   Team Card Decoration
+================================ */
+
+
+.team-card:nth-child(4n+1) {
+
+    background: var(--color-mount-leaf);
+
+    transform: rotate(-1.4deg);
+
+}
+
+
+
+.team-card:nth-child(4n+2) {
+
+    background: var(--color-mount-crayon);
+
+    transform: rotate(1deg);
+
+}
+
+
+
+.team-card:nth-child(4n+3) {
+
+    background: var(--color-mount-crayon);
+
+    transform: rotate(-0.8deg);
+
+}
+
+
+
+.team-card:nth-child(4n+4) {
+
+    background: var(--color-mount-leaf);
+
+    transform: rotate(1.4deg);
+
+}
+
+
+
+.team-card::before {
+
+    transform: translateX(-50%) rotate(-8deg);
+
+}
+
+
+
+.team-card:hover {
+
+    transform:
+
+        translateY(-8px)
+
+        rotate(0deg);
+
+
+    box-shadow:
+
+        var(--shadow-medium);
+
+}
+
+
+
+
+
+/* ================================
+   Leaders Decoration
+================================ */
+
+
+.leader-card--main {
+
+    background: var(--color-mount-crayon);
+
+    transform:
+
+        translateY(-12px);
+
+}
+
+
+
+.leader-card--main:hover {
+
+    transform:
+
+        translateY(-18px);
+
+
+    box-shadow:
+
+        var(--shadow-medium);
+
+}
+
+
+
+/* 副代表カードにゆるい傾き+台紙カラー(コルクボード風) */
+
+.leader-card:not(.leader-card--main):nth-child(5n+1) {
+
+    background: var(--color-mount-leaf);
+
+    transform: rotate(-1.2deg);
+
+}
+
+
+
+.leader-card:not(.leader-card--main):nth-child(5n+2) {
+
+    background: var(--color-mount-crayon);
+
+    transform: rotate(1deg);
+
+}
+
+
+
+.leader-card:not(.leader-card--main):nth-child(5n+3) {
+
+    background: var(--color-mount-leaf);
+
+    transform: rotate(-0.8deg);
+
+}
+
+
+
+.leader-card:not(.leader-card--main):nth-child(5n+4) {
+
+    background: var(--color-mount-crayon);
+
+    transform: rotate(1.2deg);
+
+}
+
+
+
+.leader-card:not(.leader-card--main):nth-child(5n+5) {
+
+    background: var(--color-mount-leaf);
+
+    transform: rotate(-1deg);
+
+}
+
+
+
+.leader-card:not(.leader-card--main):hover {
+
+    transform:
+
+        translateY(-8px)
+
+        rotate(0deg);
+
+}
+
+
+
+
+
+/* ================================
+   Hero Image
+================================ */
+
+
+.hero-image {
+
+    transition:
+
+        opacity
+
+        0.8s
+
+        ease;
+
+}
+
+
+
+
+
+/* ================================
+   Responsive Hero
+================================ */
+
+
+@media(max-width:900px){
+
+
+    .hero__subtitle {
+
+        font-size:
+
+            15px;
+
+    }
+
+
+
+    .hero__place {
+
+        font-size:
+
+            14px;
+
+    }
+
+
+
+    .hero {
+
+        height: auto;
+
+        aspect-ratio: 4 / 5;
+
+        min-height: 0;
+
+    }
+
+
+}

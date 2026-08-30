@@ -1,0 +1,36 @@
+[
+    {
+        "role": "代表",
+        "name": "田中太郎",
+        "image": "images/leaders/IMG_0131.HEIC",
+        "description": "紹介文が入ります。"
+    },
+
+    {
+        "role": "副代表",
+        "name": "田中太郎",
+        "image": "images/leaders/member02.jpg",
+        "description": "紹介文が入ります。"
+    },
+
+    {
+        "role": "副代表",
+        "name": "田中太郎",
+        "image": "images/leaders/member03.jpg",
+        "description": "紹介文が入ります。"
+    },
+
+    {
+        "role": "副代表",
+        "name": "田中太郎",
+        "image": "images/leaders/member04.jpg",
+        "description": "紹介文が入ります。"
+    },
+
+    {
+        "role": "副代表",
+        "name": "田中太郎",
+        "image": "images/leaders/member05.jpg",
+        "description": "紹介文が入ります。"
+    }
+]

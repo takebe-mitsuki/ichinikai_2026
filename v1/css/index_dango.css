@@ -1,0 +1,198 @@
+/* =========================================
+   index_dango.css
+   焼きだんご班 Style
+========================================= */
+
+
+/* =========================================
+   Theme Color
+========================================= */
+
+
+:root {
+
+    --dango-main:
+        #c85a32;
+
+    --dango-light:
+        #fff0e5;
+
+    --dango-dark:
+        #7a3218;
+
+}
+
+
+
+
+
+/* =========================================
+   Hero
+========================================= */
+
+
+.team-hero {
+
+    background-image:
+        url("../images/teams/dango-header.jpg");
+
+}
+
+
+
+.team-hero-content h1 {
+
+    text-shadow:
+        0 4px 15px rgba(0,0,0,0.45);
+
+}
+
+
+
+
+
+/* =========================================
+   Section
+========================================= */
+
+
+.section-title span {
+
+    color:
+        var(--dango-main);
+
+}
+
+
+
+.section-title h2::after {
+
+    background:
+        var(--dango-main);
+
+}
+
+
+
+
+
+/* =========================================
+   News
+========================================= */
+
+
+.team-news-card {
+
+    border-left:
+        6px solid var(--dango-main);
+
+}
+
+
+
+.team-news-card h3 {
+
+    color:
+        var(--dango-dark);
+
+}
+
+
+
+
+
+/* =========================================
+   Members
+========================================= */
+
+
+.member-card {
+
+    border-top:
+        5px solid var(--dango-main);
+
+}
+
+
+
+.member-role {
+
+    color:
+        var(--dango-main);
+
+}
+
+
+
+
+
+/* =========================================
+   Recipe
+========================================= */
+
+
+.recipe-section {
+
+    background:
+        var(--dango-light);
+
+}
+
+
+
+.recipe-content h3 {
+
+    color:
+        var(--dango-dark);
+
+}
+
+
+
+.recipe-content li {
+
+    margin-bottom:
+        12px;
+
+}
+
+
+
+
+
+/* =========================================
+   Decorative
+========================================= */
+
+
+.team-news-card::before {
+
+    content:
+        "🍡";
+
+    font-size:
+        1.8rem;
+
+}
+
+
+
+
+
+/* =========================================
+   Responsive
+========================================= */
+
+
+@media screen and (max-width:600px){
+
+
+    .team-hero h1 {
+
+        font-size:
+            2.8rem;
+
+    }
+
+
+}

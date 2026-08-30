@@ -1,0 +1,39 @@
+[
+    {
+        "role": "班長",
+        "name": "深井力輝",
+        "nickname": "りき",
+        "image": "images/riki.jpg",
+        "description": "みんな、ありがとう"
+    },
+   {
+        "role": "副班長",
+        "name": "後潟慎太郎",
+        "nickname": "やまたろ",
+        "image": "images/age02.jpg",
+        "description": "揚げてます"
+    },
+    {
+        "role": "副班長",
+        "name": "鹿村朝陽",
+        "nickname": "あさひ",
+        "image": "images/asahi.jpg",
+        "description": "バウムクーヘンだけじゃなくて、学部祭も盛り上げちゃうよ〜"
+    },
+    {
+        "role": "副班長",
+        "name": "北野広樹",
+        "nickname": "",
+        "image": "images/hiroki.jpg",
+        "description": "揚げてます"
+    },
+        {
+        "role": "副班長",
+        "name": "内藤拓生",
+        "nickname": "ろみー",
+        "image": "images/romi-.jpg",
+        "description": "揚げるのめっちゃ頑張りたいです💪"
+    } 
+      
+  
+]

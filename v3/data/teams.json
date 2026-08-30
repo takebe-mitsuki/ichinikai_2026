@@ -1,0 +1,29 @@
+[
+    {
+        "name": "ぐらぐら肉じゃが班",
+        "image": "images/teams/meat.jpg",
+        "catchcopy": "日本の肉じゃが、変える！",
+        "link": "index_meat.html"
+    },
+
+    {
+        "name": "こねこねだんご班",
+        "image": "images/teams/dango.jpg",
+        "catchcopy": "手ごねのあたたかみ",
+        "link": "index_dango.html"
+    },
+
+    {
+        "name": "純純純豆腐班",
+        "image": "images/teams/tofu.jpg",
+        "catchcopy": "温かい一杯を届けます。",
+        "link": "index_tofu.html"
+    },
+
+    {
+        "name": "揚げバウム班",
+        "image": "images/teams/age.jpg",
+        "catchcopy": "新しいバウムの魅力を。",
+        "link": "index_age.html"
+    }
+]

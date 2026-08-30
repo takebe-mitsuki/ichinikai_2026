@@ -1,0 +1,201 @@
+/*
+========================================
+
+Team Style: すんどぅゔ班
+(赤白ベース・緑の差し色)
+
+教育学部祭 いちにかい企画
+Ver.2
+
+========================================
+*/
+
+
+/* ================================
+   Color Override
+================================ */
+
+
+:root {
+
+    --color-bg: #FFFBFA;
+
+    --color-surface: #FFFFFF;
+
+    --color-text: #2B1414;
+
+    --color-text-light: #8A6B6B;
+
+    --color-border: #F3DEDE;
+
+    --color-accent: #E8402E;
+
+    --color-accent-dark: #B32A1E;
+
+    --color-warm: #4C9A5B;
+
+    --color-warm-dark: #357245;
+
+    --color-mount-leaf: #E8F5EA;
+
+    --color-mount-crayon: #FDE6E3;
+
+}
+
+
+
+
+
+/* ================================
+   Section Zebra
+================================ */
+
+
+.section:nth-of-type(even) {
+
+    background-color: #FFF3F2;
+
+    background-image:
+
+        var(--pattern-flower-lattice);
+
+    background-attachment: fixed;
+
+}
+
+
+
+
+
+/* ================================
+   Page Background (花と格子のオリジナル柄)
+================================ */
+
+
+:root {
+
+    --pattern-flower-lattice:
+
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg stroke='%23E8402E' stroke-opacity='0.18' stroke-width='1.3' fill='none'%3E%3Crect x='-5' y='-5' width='10' height='10' transform='rotate(45 0 0)'/%3E%3Crect x='55' y='-5' width='10' height='10' transform='rotate(45 60 0)'/%3E%3Crect x='-5' y='55' width='10' height='10' transform='rotate(45 0 60)'/%3E%3Crect x='55' y='55' width='10' height='10' transform='rotate(45 60 60)'/%3E%3Cg transform='translate(30,30)'%3E%3Cellipse cx='0' cy='-10' rx='4.5' ry='10' transform='rotate(0)'/%3E%3Cellipse cx='0' cy='-10' rx='4.5' ry='10' transform='rotate(72)'/%3E%3Cellipse cx='0' cy='-10' rx='4.5' ry='10' transform='rotate(144)'/%3E%3Cellipse cx='0' cy='-10' rx='4.5' ry='10' transform='rotate(216)'/%3E%3Cellipse cx='0' cy='-10' rx='4.5' ry='10' transform='rotate(288)'/%3E%3Ccircle r='3'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+}
+
+
+
+body {
+
+    background-color: var(--color-bg);
+
+    background-image:
+
+        var(--pattern-flower-lattice);
+
+    background-attachment: fixed;
+
+}
+
+
+
+
+
+/* ================================
+   Heading (豆腐・唐辛子・ねぎマーク)
+================================ */
+
+
+.section__heading h2 {
+
+    border-bottom-color: var(--color-accent);
+
+}
+
+
+
+.section__heading h2::before {
+
+    content: "";
+
+    display: inline-block;
+
+    width: 36px;
+
+    height: 31px;
+
+    margin-right: 8px;
+
+    vertical-align: middle;
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-image:
+
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 70'%3E%3Cpath d='M28 14 Q24 8 28 2' stroke='%238A6B6B' stroke-width='2' fill='none' opacity='0.6' stroke-linecap='round'/%3E%3Cpath d='M40 14 Q36 8 40 2' stroke='%238A6B6B' stroke-width='2' fill='none' opacity='0.6' stroke-linecap='round'/%3E%3Cpath d='M52 14 Q48 8 52 2' stroke='%238A6B6B' stroke-width='2' fill='none' opacity='0.6' stroke-linecap='round'/%3E%3Crect x='2' y='34' width='10' height='6' rx='3' fill='%232B1414'/%3E%3Crect x='68' y='34' width='10' height='6' rx='3' fill='%232B1414'/%3E%3Cpath d='M10 32 L70 32 L62 66 L18 66 Z' fill='%232B1414'/%3E%3Cellipse cx='40' cy='32' rx='30' ry='9' fill='%23E8402E'/%3E%3Crect x='24' y='24' width='14' height='11' rx='2' fill='%23FFFFFF'/%3E%3Cellipse cx='50' cy='27' rx='6' ry='3.5' fill='%23C1281B' transform='rotate(-20 50 27)'/%3E%3Crect x='44' y='20' width='4' height='14' rx='2' fill='%234C9A5B' transform='rotate(15 46 27)'/%3E%3Ccircle cx='32' cy='27' r='4' fill='%23F5B942'/%3E%3C/svg%3E");
+
+}
+
+
+
+
+
+/* ================================
+   Team Banner (ぐつぐつ煮えるスープ)
+================================ */
+
+
+.team-banner {
+
+    background-image:
+
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg stroke='%23FFFFFF' stroke-opacity='0.25' stroke-width='1.3' fill='none'%3E%3Crect x='-5' y='-5' width='10' height='10' transform='rotate(45 0 0)'/%3E%3Crect x='55' y='-5' width='10' height='10' transform='rotate(45 60 0)'/%3E%3Crect x='-5' y='55' width='10' height='10' transform='rotate(45 0 60)'/%3E%3Crect x='55' y='55' width='10' height='10' transform='rotate(45 60 60)'/%3E%3Cg transform='translate(30,30)'%3E%3Cellipse cx='0' cy='-10' rx='4.5' ry='10' transform='rotate(0)'/%3E%3Cellipse cx='0' cy='-10' rx='4.5' ry='10' transform='rotate(72)'/%3E%3Cellipse cx='0' cy='-10' rx='4.5' ry='10' transform='rotate(144)'/%3E%3Cellipse cx='0' cy='-10' rx='4.5' ry='10' transform='rotate(216)'/%3E%3Cellipse cx='0' cy='-10' rx='4.5' ry='10' transform='rotate(288)'/%3E%3Ccircle r='3'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+
+        linear-gradient(
+
+            160deg,
+
+            #B32A1E 0%,
+            #E8402E 60%,
+            #D93A2B 100%
+
+        );
+
+}
+
+
+
+.team-banner h1 {
+
+    color: #FFFFFF;
+
+    text-shadow:
+
+        0 4px 14px
+
+        rgba(0,0,0,0.3);
+
+}
+
+
+
+.team-banner__back {
+
+    color: #FFFFFF;
+
+}
+
+
+
+
+
+/* ================================
+   Card Accent (土鍋のフチ風)
+================================ */
+
+
+.leader-card,
+.recipe-card {
+
+    border-top: 4px solid var(--color-text);
+
+}

@@ -1,7 +1,7 @@
 [
     {
         "name": "肉じゃが（50人前)",
-        "image": "images/recipe/meat_recipe01.jpg",
+        "image": "images/sample.jpg",
         "ingredients": [
             { "name": "ジャガイモ", "amount": "1600g（14個目安）" },
             { "name": "豚肉（薄切り・肩ロース）", "amount": "600g" },

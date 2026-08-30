@@ -8,21 +8,21 @@
 
     {
         "name": "こねこねだんご班",
-        "image": "images/teams/dango.jpg",
+        "image": "images/sample.jpg",
         "catchcopy": "手ごねのあたたかみ",
         "link": "index_dango.html"
     },
 
     {
         "name": "純純純豆腐班",
-        "image": "images/teams/tofu.jpg",
+        "image": "images/sample.jpg",
         "catchcopy": "温かい一杯を",
         "link": "index_tofu.html"
     },
 
     {
         "name": "揚げバウム班",
-        "image": "images/teams/age.jpg",
+        "image": "images/sample.jpg",
         "catchcopy": "新しいバウムの魅力を。",
         "link": "index_age.html"
     }

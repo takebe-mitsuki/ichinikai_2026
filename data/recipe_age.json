@@ -1,21 +1,21 @@
 [
     {
         "name": "揚げバウム",
-        "image": "images/recipe/age_recipe01.jpg",
+        "image": "images/sample.jpg",
         "ingredients": [
-            { "name": "バウムクーヘン", "amount": "1個" },
-            { "name": "天ぷら粉", "amount": "100g" },
-            { "name": "水", "amount": "150ml" },
-            { "name": "パン粉", "amount": "適量" },
-            { "name": "揚げ油", "amount": "適量" },
-            { "name": "粉砂糖", "amount": "適量" }
+            { "name": "", "amount": "" },
+            { "name": "", "amount": "" },
+            { "name": "", "amount": "" },
+            { "name": "", "amount": "" },
+            { "name": "", "amount": "" },
+            { "name": "", "amount": "" }
         ],
         "steps": [
-            "バウムクーヘンを食べやすい大きさに切る。",
-            "天ぷら粉を水で溶き、衣を作る。",
-            "バウムクーヘンに衣をつけ、パン粉をまぶす。",
-            "170度の油できつね色になるまで揚げる。",
-            "油を切り、粉砂糖をふって完成。"
+            "",
+            "",
+            "",
+            "",
+            ""
         ]
     }
 ]

@@ -47,7 +47,8 @@ async function loadTeamRecipe(){
 
         const response =
             await fetch(
-                `data/recipe_${TEAM_SLUG}.json`
+                `data/recipe_${TEAM_SLUG}.json`,
+                { cache: "no-store" }
             );
 
 
@@ -174,7 +175,7 @@ function displayTeamRecipe(
 
                     <h4 class="recipe-card__section-title">
 
-                        手順
+                        工程
 
                     </h4>
 

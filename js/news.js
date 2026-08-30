@@ -49,7 +49,8 @@ async function loadNews(){
 
         const response =
             await fetch(
-                "data/news.json"
+                "data/news.json",
+                { cache: "no-store" }
             );
 
 

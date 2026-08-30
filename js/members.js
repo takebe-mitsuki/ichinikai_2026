@@ -45,7 +45,8 @@ async function loadMembers(){
 
         const response =
             await fetch(
-                "data/members.json"
+                "data/members.json",
+                { cache: "no-store" }
             );
 
 

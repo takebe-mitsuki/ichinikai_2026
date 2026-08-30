@@ -47,7 +47,8 @@ async function loadSchedule(){
 
         const response =
             await fetch(
-                "data/schedule.json"
+                "data/schedule.json",
+                { cache: "no-store" }
             );
 
 

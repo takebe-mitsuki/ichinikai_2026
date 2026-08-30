@@ -48,7 +48,8 @@ async function loadTeamLeaders(){
 
         const response =
             await fetch(
-                `data/leaders_${TEAM_SLUG}.json`
+                `data/leaders_${TEAM_SLUG}.json`,
+                { cache: "no-store" }
             );
 
 

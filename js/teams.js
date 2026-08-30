@@ -49,7 +49,8 @@ async function loadTeams(){
 
         const response =
             await fetch(
-                "data/teams.json"
+                "data/teams.json",
+                { cache: "no-store" }
             );
 
 

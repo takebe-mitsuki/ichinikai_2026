@@ -49,7 +49,8 @@ async function setupSlideshow(){
 
         const response =
             await fetch(
-                "data/hero.json"
+                "data/hero.json",
+                { cache: "no-store" }
             );
 
 

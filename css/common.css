@@ -143,6 +143,11 @@ Ver.2
     );
 
 
+    max-height: calc(100vh - 48px);
+
+    overflow-y: auto;
+
+
     background:
 
         #ffffff;
@@ -188,17 +193,21 @@ Ver.2
 
     position:
 
-        absolute;
+        sticky;
 
 
     top:
 
-        16px;
+        0;
 
 
-    right:
+    float: right;
 
-        20px;
+
+    margin-right: -20px;
+
+
+    z-index: 2;
 
 
     font-size:

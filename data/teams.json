@@ -16,14 +16,14 @@
     {
         "name": "純純純豆腐班",
         "image": "images/sample.jpg",
-        "catchcopy": "温かい一杯を",
+        "catchcopy": "準備中",
         "link": "index_tofu.html"
     },
 
     {
         "name": "揚げバウム班",
         "image": "images/sample.jpg",
-        "catchcopy": "新しいバウムの魅力を。",
+        "catchcopy": "準備中",
         "link": "index_age.html"
     }
 ]

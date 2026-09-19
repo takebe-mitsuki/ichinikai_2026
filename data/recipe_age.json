@@ -3,19 +3,10 @@
         "name": "揚げバウム",
         "image": "images/sample.jpg",
         "ingredients": [
-            { "name": "", "amount": "" },
-            { "name": "", "amount": "" },
-            { "name": "", "amount": "" },
-            { "name": "", "amount": "" },
-            { "name": "", "amount": "" },
-            { "name": "", "amount": "" }
+            { "name": "coming soon...", "amount": "" }
         ],
         "steps": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "coming soon..."
         ]
     }
 ]

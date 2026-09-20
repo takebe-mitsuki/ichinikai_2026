@@ -1,12 +1,52 @@
 [
     {
-        "name": "焼きだんご",
-        "image": "images/sample.jpg",
+        "name": "団子の作り方",
+        "image": "images/dango/recipe.jpg",
         "ingredients": [
-            { "name": "coimng soon...", "amount": "" }
+            { "name": "上新粉", "amount": "" },
+            { "name": "水", "amount": "" }
         ],
         "steps": [
-            "coming soon..."
+            "上新粉にパッケージに書いてある量の水を入れる<br>　☆水をちょっと多めにするとおいしいかも？<br>ひとつになるまでこねこねし、10gずつに分ける<br>沸騰したお湯に入れる<br>団子が浮いてきて1分ほど経ったらお湯から出し、水気を切る"
+        ]
+    },
+     {
+        "name": "味噌だれの作り方(団子２０個分)",
+        "image": "images/dango/recipe_miso.jpg",
+        "ingredients": [
+            { "name": "みりん", "amount": "大さじ1.5" },
+            { "name": "酒", "amount": "大さじ0.5" },
+            { "name": "味噌", "amount": "大さじ1.5" },
+            { "name": "砂糖", "amount": "大さじ2" }
+        ],
+        "steps": [
+            "☆600Wで1分ほどチンするとまざりやすいです！<br>団子に焼き目がつくまで焼いたら、味噌だれを絡めて出来上がり！"
+        ]
+    }, 
+    {
+        "name": "たこ焼き風の作り方",
+        "image": "images/dango/recipe_takoyaki.jpg",
+        "ingredients": [
+            { "name": "団子", "amount": "" },
+            { "name": "ソース", "amount": "" },
+            { "name": "マヨネーズ", "amount": "" },
+            { "name": "かつお節", "amount": "" },
+            { "name": "青のり", "amount": "" }
+        ],
+        "steps": [
+            "団子に焼き目がつくまで焼いたらお皿に盛り付け、ソース・マヨネーズ・かつお節・青のりをかける"
+        ]
+    },
+    {
+        "name": "あんこホイップの作り方",
+        "image": "images/dango/recipe_anko.jpg",
+        "ingredients": [
+            { "name": "団子", "amount": "" },
+            { "name": "あんこ", "amount": "" },
+            { "name": "ホイップ", "amount": "" }
+        ],
+        "steps": [
+            "団子を焼かずにそのままあんことホイップを乗せる"
         ]
     }
 ]

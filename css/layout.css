@@ -399,24 +399,6 @@ Ver.2
 
 
 
-.hero__scroll {
-
-    display: inline-flex;
-
-    flex-direction: column;
-
-    gap: 8px;
-
-    margin-top: 70px;
-
-    font-size: 12px;
-
-    letter-spacing: 0.2em;
-
-}
-
-
-
 .hero__wave {
 
     position: absolute;

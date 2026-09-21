@@ -273,6 +273,47 @@ Ver.2
 
 
 
+/* ================================
+   News Modal Text & Links
+================================ */
+
+
+.news-modal__text {
+
+    /* 長いURLでもはみ出さずに折り返す */
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
+
+}
+
+
+
+.news-modal__text a {
+
+    color: var(--color-accent-dark);
+
+    font-weight: 700;
+
+    text-decoration: underline;
+
+    text-underline-offset: 3px;
+
+    transition: var(--transition-fast);
+
+}
+
+
+
+.news-modal__text a:hover {
+
+    opacity: 0.7;
+
+}
+
+
+
 
 
 /* ================================

@@ -259,6 +259,30 @@ Ver.2
 
 
 
+.about-item p + p {
+
+    margin-top: 16px;
+
+}
+
+
+
+.about-item__label {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--color-accent-dark);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+
 
 
 /* ================================

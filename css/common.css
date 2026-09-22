@@ -218,6 +218,41 @@ Ver.2
 
 
 
+.leader-modal__photo {
+
+    display: block;
+
+    width: 140px;
+
+    height: 140px;
+
+    margin: 0 auto 20px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+}
+
+
+
+#leader-modal .news-modal__category,
+#leader-modal .news-modal__title {
+
+    text-align: center;
+
+}
+
+
+
+#leader-modal .news-modal__text {
+
+    text-align: center;
+
+}
+
+
+
 .news-modal__category {
 
     color:

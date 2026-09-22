@@ -211,6 +211,22 @@ Ver.2
 ================================ */
 
 
+.leader-card {
+
+    cursor: pointer;
+
+}
+
+
+
+.leader-card img {
+
+    margin-top: 0;
+
+}
+
+
+
 .leader-card--main {
 
     background: var(--color-mount-crayon);

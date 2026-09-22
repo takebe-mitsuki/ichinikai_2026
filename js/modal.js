@@ -1,7 +1,7 @@
 /*
 ========================================
 
-News Modal
+News & Leader Modal
 
 教育学部祭 いちにかい企画
 Ver.2
@@ -17,6 +17,8 @@ document.addEventListener(
 
         setupModal();
 
+        setupLeaderModal();
+
 
     }
 );
@@ -25,6 +27,13 @@ document.addEventListener(
 
 
 
+
+
+/*
+----------------------------------------
+News Modal
+----------------------------------------
+*/
 
 
 function openNewsModal(news){
@@ -66,9 +75,9 @@ function openNewsModal(news){
 
 
     modal.querySelector(
-    ".news-modal__text"
-).innerHTML =
-    news.content;
+        ".news-modal__text"
+    ).innerHTML =
+        news.content;
 
 
 
@@ -164,6 +173,183 @@ function setupModal(){
             ){
 
                 closeNewsModal();
+
+            }
+
+
+        }
+
+    );
+
+
+}
+
+
+
+
+
+
+
+/*
+----------------------------------------
+Leader Modal
+(代表・副代表・班長のプロフィール表示)
+----------------------------------------
+*/
+
+
+function openLeaderModal(member){
+
+
+    const modal =
+        document.querySelector(
+            "#leader-modal"
+        );
+
+
+    if(!modal){
+
+        return;
+
+    }
+
+
+
+    modal.querySelector(
+        "#leader-modal-photo"
+    ).src =
+        member.image;
+
+
+    modal.querySelector(
+        "#leader-modal-photo"
+    ).alt =
+        member.name;
+
+
+
+    modal.querySelector(
+        "#leader-modal-role"
+    ).textContent =
+        member.role;
+
+
+
+    modal.querySelector(
+        "#leader-modal-name"
+    ).textContent =
+        member.nickname
+            ? `${member.name}(${member.nickname})`
+            : member.name;
+
+
+
+    modal.querySelector(
+        "#leader-modal-description"
+    ).textContent =
+        member.description;
+
+
+
+
+    modal.classList.add(
+        "is-open"
+    );
+
+
+    document.body.style.overflow =
+        "hidden";
+
+
+}
+
+
+
+
+
+
+
+function closeLeaderModal(){
+
+
+    const modal =
+        document.querySelector(
+            "#leader-modal"
+        );
+
+
+    if(!modal){
+
+        return;
+
+    }
+
+
+    modal.classList.remove(
+        "is-open"
+    );
+
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+
+
+
+
+
+function setupLeaderModal(){
+
+
+    const modal =
+        document.querySelector(
+            "#leader-modal"
+        );
+
+
+    const closeButton =
+        document.querySelector(
+            "#leader-modal-close"
+        );
+
+
+
+    if(!modal){
+
+        return;
+
+    }
+
+
+
+
+    closeButton.addEventListener(
+
+        "click",
+
+        closeLeaderModal
+
+    );
+
+
+
+
+
+    modal.addEventListener(
+
+        "click",
+
+        (event)=>{
+
+
+            if(
+                event.target === modal
+            ){
+
+                closeLeaderModal();
 
             }
 

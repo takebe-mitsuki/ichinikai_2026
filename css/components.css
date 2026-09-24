@@ -292,27 +292,42 @@ Ver.2
 
 .schedule-item {
 
-    position: relative;
+    display: grid;
+
+    grid-template-columns:
+
+        160px 1fr;
+
+    align-items: center;
+
+    gap: 24px;
 
     padding:
 
-        16px 48px;
+        16px 40px;
 
 
-    background:
+    border-bottom:
 
-        var(--color-surface);
+        1px solid
+
+        var(--color-border);
+
+}
 
 
-    border-radius:
 
-        var(--radius-medium);
+.schedule-item:last-child {
+
+    border-bottom: none;
+
+}
 
 
-    box-shadow:
 
-        var(--shadow-small);
+.schedule-item:hover {
 
+    background-color: #F8FAF4;
 
 }
 
@@ -324,7 +339,7 @@ Ver.2
 
     font-size:
 
-        28px;
+        16px;
 
 
     font-weight:
@@ -332,14 +347,19 @@ Ver.2
         700;
 
 
-    margin-bottom:
-
-        12px;
-
-
     color:
 
         var(--color-accent-dark);
+
+}
+
+
+
+.schedule-item p {
+
+    color: var(--color-text-light);
+
+    font-size: 15px;
 
 }
 
@@ -808,22 +828,27 @@ Ver.2
 
 
 
-    .about__content {
+    .schedule-item {
 
         grid-template-columns:
 
             1fr;
 
 
+        gap:
+
+            4px;
+
+
     }
 
 
 
-    .leaders__grid {
+    .about__content {
 
         grid-template-columns:
 
-            repeat(2,1fr);
+            1fr;
 
 
     }
@@ -848,8 +873,6 @@ Ver.2
 
 @media(max-width:600px){
 
-
-    .leaders__grid,
 
     .teams__grid {
 

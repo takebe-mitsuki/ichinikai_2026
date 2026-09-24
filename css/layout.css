@@ -524,7 +524,13 @@ JSONの読み込みが終わるまで中身が空になるため、
 
     flex-direction: column;
 
-    gap: 40px;
+    background: var(--color-surface);
+
+    border-radius: var(--radius-medium);
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow-small);
 
 }
 
@@ -539,13 +545,17 @@ JSONの読み込みが終わるまで中身が空になるため、
 
 .leaders__grid {
 
-    display: grid;
+    display: flex;
 
-    grid-template-columns:
+    flex-direction: column;
 
-        repeat(5, 1fr);
+    background: var(--color-surface);
 
-    gap: 24px;
+    border-radius: var(--radius-medium);
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow-small);
 
 }
 

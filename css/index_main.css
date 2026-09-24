@@ -213,7 +213,51 @@ Ver.2
 
 .leader-card {
 
+    display: grid;
+
+    grid-template-columns: 56px 1fr;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 14px 40px;
+
+    background: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    border-bottom: 1px solid var(--color-border);
+
     cursor: pointer;
+
+    transition: var(--transition-fast);
+
+}
+
+
+
+.leader-card:last-child {
+
+    border-bottom: none;
+
+}
+
+
+
+.leader-card:hover {
+
+    background-color: #F8FAF4;
+
+}
+
+
+
+.leader-card::before {
+
+    content: none;
 
 }
 
@@ -221,7 +265,25 @@ Ver.2
 
 .leader-card img {
 
+    width: 56px;
+
+    height: 56px;
+
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+
     margin-top: 0;
+
+}
+
+
+
+.leader-card h3 {
+
+    padding: 0;
+
+    font-size: 16px;
 
 }
 
@@ -229,90 +291,15 @@ Ver.2
 
 .leader-card--main {
 
-    background: var(--color-mount-crayon);
-
-    transform:
-
-        translateY(-12px);
+    background-color: var(--color-mount-crayon);
 
 }
 
 
 
-.leader-card--main:hover {
+.leader-card--main h3 {
 
-    transform:
-
-        translateY(-18px);
-
-
-    box-shadow:
-
-        var(--shadow-medium);
-
-}
-
-
-
-/* 副代表カードにゆるい傾き+台紙カラー(コルクボード風) */
-
-.leader-card:not(.leader-card--main):nth-child(5n+1) {
-
-    background: var(--color-mount-leaf);
-
-    transform: rotate(-1.2deg);
-
-}
-
-
-
-.leader-card:not(.leader-card--main):nth-child(5n+2) {
-
-    background: var(--color-mount-crayon);
-
-    transform: rotate(1deg);
-
-}
-
-
-
-.leader-card:not(.leader-card--main):nth-child(5n+3) {
-
-    background: var(--color-mount-leaf);
-
-    transform: rotate(-0.8deg);
-
-}
-
-
-
-.leader-card:not(.leader-card--main):nth-child(5n+4) {
-
-    background: var(--color-mount-crayon);
-
-    transform: rotate(1.2deg);
-
-}
-
-
-
-.leader-card:not(.leader-card--main):nth-child(5n+5) {
-
-    background: var(--color-mount-leaf);
-
-    transform: rotate(-1deg);
-
-}
-
-
-
-.leader-card:not(.leader-card--main):hover {
-
-    transform:
-
-        translateY(-8px)
-
-        rotate(0deg);
+    font-weight: 700;
 
 }
 

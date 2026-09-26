@@ -19,6 +19,8 @@ document.addEventListener(
 
         setupLeaderModal();
 
+        setupScheduleModal();
+
 
     }
 );
@@ -350,6 +352,201 @@ function setupLeaderModal(){
             ){
 
                 closeLeaderModal();
+
+            }
+
+
+        }
+
+    );
+
+
+}
+
+
+
+
+
+
+
+/*
+----------------------------------------
+Schedule Modal
+(過去のスケジュールをまとめて表示)
+----------------------------------------
+*/
+
+
+function openScheduleModal(pastItems){
+
+
+    const modal =
+        document.querySelector(
+            "#schedule-modal"
+        );
+
+
+    if(!modal){
+
+        return;
+
+    }
+
+
+
+    const list =
+        modal.querySelector(
+            "#schedule-modal-list"
+        );
+
+
+    list.innerHTML = "";
+
+
+
+    pastItems.forEach(
+        (item) => {
+
+
+            const div =
+                document.createElement(
+                    "div"
+                );
+
+
+            div.className =
+                "schedule-item";
+
+
+
+            div.innerHTML = `
+
+                <time>
+
+                    ${item.date}
+
+                </time>
+
+
+                <p>
+
+                    ${item.teams.join("<br>")}
+
+                </p>
+
+            `;
+
+
+
+            list.appendChild(
+                div
+            );
+
+
+        }
+    );
+
+
+
+
+    modal.classList.add(
+        "is-open"
+    );
+
+
+    document.body.style.overflow =
+        "hidden";
+
+
+}
+
+
+
+
+
+
+
+function closeScheduleModal(){
+
+
+    const modal =
+        document.querySelector(
+            "#schedule-modal"
+        );
+
+
+    if(!modal){
+
+        return;
+
+    }
+
+
+    modal.classList.remove(
+        "is-open"
+    );
+
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+
+
+
+
+
+function setupScheduleModal(){
+
+
+    const modal =
+        document.querySelector(
+            "#schedule-modal"
+        );
+
+
+    const closeButton =
+        document.querySelector(
+            "#schedule-modal-close"
+        );
+
+
+
+    if(!modal){
+
+        return;
+
+    }
+
+
+
+
+    closeButton.addEventListener(
+
+        "click",
+
+        closeScheduleModal
+
+    );
+
+
+
+
+
+    modal.addEventListener(
+
+        "click",
+
+        (event)=>{
+
+
+            if(
+                event.target === modal
+            ){
+
+                closeScheduleModal();
 
             }
 

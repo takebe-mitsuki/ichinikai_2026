@@ -76,10 +76,10 @@ function openNewsModal(news){
 
 
 
-    modal.querySelector(
+       modal.querySelector(
         ".news-modal__text"
     ).innerHTML =
-        news.content;
+        linkify(news.content);
 
 
 
@@ -555,5 +555,25 @@ function setupScheduleModal(){
 
     );
 
+
+}
+
+/*
+本文中のURL(http://やhttps://で始まる文字列)を
+自動でクリックできるリンクに変換する。
+*/
+function linkify(text){
+
+    const urlPattern =
+        /(https?:\/\/[^\s<"]+)/g;
+
+    return text.replace(
+        urlPattern,
+        (url) => {
+
+            return `<a href="${url}" target="_blank" rel="noopener">${url}</a>`;
+
+        }
+    );
 
 }

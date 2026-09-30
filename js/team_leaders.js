@@ -117,21 +117,7 @@ function displayTeamLeaders(
 
 
 
-            const nicknameHTML =
-                member.nickname
-                    ? `<p class="leader-card__nickname">${member.nickname}</p>`
-                    : "";
-
-
-
             card.innerHTML = `
-
-                <span>
-
-                    ${member.role}
-
-                </span>
-
 
                 <img
                     src="${member.image}"
@@ -143,25 +129,27 @@ function displayTeamLeaders(
 
                     ${member.name}
 
-                    <span class="leader-card__role">
-
-                        ${member.role}
-
-                    </span>
-
                 </h3>
 
-
-                ${nicknameHTML}
-
-
-                <p>
-
-                    ${member.description}
-
-                </p>
-
             `;
+
+
+
+            card.addEventListener(
+
+                "click",
+
+                () => {
+
+
+                    openLeaderModal(
+                        member
+                    );
+
+
+                }
+
+            );
 
 
 

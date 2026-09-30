@@ -325,24 +325,105 @@ Ver.2
 
     margin: 0 auto;
 
-    display: grid;
+    display: flex;
 
-    grid-template-columns:
+    flex-direction: column;
 
-        repeat(auto-fit, minmax(220px, 1fr));
+    background: var(--color-surface);
 
-    gap: 24px;
+    border-radius: var(--radius-medium);
 
-    min-height: 320px;
+    overflow: hidden;
+
+    box-shadow: var(--shadow-small);
 
 }
 
 
 
-.leader-card,
 .recipe-card {
 
     border: 1px solid var(--color-border);
+
+}
+
+
+
+.leader-card {
+
+    display: grid;
+
+    grid-template-columns: 56px 1fr;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 14px 40px;
+
+    border-bottom: 1px solid var(--color-border);
+
+    cursor: pointer;
+
+    transition: var(--transition-fast);
+
+}
+
+
+
+.leader-card:last-child {
+
+    border-bottom: none;
+
+}
+
+
+
+.leader-card:hover {
+
+    background-color: var(--color-mount-leaf);
+
+}
+
+
+
+.leader-card img {
+
+    width: 56px;
+
+    height: 56px;
+
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+
+    margin-top: 0;
+
+}
+
+
+
+.leader-card h3 {
+
+    padding: 0;
+
+    font-size: 16px;
+
+}
+
+
+
+.leader-card--main {
+
+    background-color: var(--color-mount-crayon);
+
+}
+
+
+
+.leader-card--main h3 {
+
+    font-weight: 700;
 
 }
 

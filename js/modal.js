@@ -246,11 +246,10 @@ function openLeaderModal(member){
 
 
 
-    modal.querySelector(
+       modal.querySelector(
         "#leader-modal-description"
-    ).textContent =
+    ).innerHTML =
         member.description;
-
 
 
 

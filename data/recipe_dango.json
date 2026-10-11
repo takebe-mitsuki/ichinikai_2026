@@ -1,7 +1,7 @@
 [
     {
         "name": "団子の作り方",
-        "image": "images/dango/recipe.jpg",
+        "image": "images/dango/recipe_dango.jpg",
         "ingredients": [
             { "name": "上新粉", "amount": "" },
             { "name": "水", "amount": "" }

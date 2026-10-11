@@ -1,12 +1,19 @@
 [
     {
         "name": "揚げバウム",
-        "image": "images/sample.jpg",
+        "image": "images/age/recipe.jpg",
         "ingredients": [
-            { "name": "coming soon...", "amount": "" }
+            { "name": "ホットケーキミックス", "amount": "１袋１６０g" },
+            { "name": "水", "amount": "１８０ml" },
+            { "name": "バウムクーヘン", "amount": "" },    
+            { "name": "油", "amount": "適量" },
+            { "name": "トッピング", "amount": "チョコ、メープル、こしあんなどお好みで" }
         ],
         "steps": [
-            "coming soon..."
+            "バウムクーヘンを半分に切る",
+            "ホットケーキミックスと水を混ぜて衣を作る",
+            "バウムクーヘンを衣につけて、油に入れてきつね色になるまで揚げる",
+            "トッピングをかけて完成！"
         ]
     }
 ]

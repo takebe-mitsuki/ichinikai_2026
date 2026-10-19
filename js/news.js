@@ -192,7 +192,7 @@ function displayNews(
                 </time>
 
 
-                <span class="news-card__category">
+                <span class="news-card__category" data-category="${news.category}">
 
                     ${news.category}
 

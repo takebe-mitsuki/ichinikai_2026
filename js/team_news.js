@@ -41,7 +41,18 @@ async function loadTeamNews(){
 
     }
 
+    const moreLink =
+        document.querySelector(
+            ".news__more-link"
+        );
 
+    if(moreLink){
+
+        moreLink.href =
+            "news.html?category=" +
+            encodeURIComponent(TEAM_CATEGORY);
+
+    }
 
     try{
 
@@ -180,7 +191,7 @@ function displayTeamNews(
                 </time>
 
 
-                <span class="news-card__category">
+                <span class="news-card__category" data-category="${news.category}">
 
                     ${news.category}
 

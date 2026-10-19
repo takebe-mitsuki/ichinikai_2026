@@ -881,6 +881,29 @@ Ver.2
             1fr;
 
     }
+.news-card__category[data-category="全体"] {
+    background: #E8F5EA;
+    color: #2F6B1E;
+}
 
+.news-card__category[data-category="ぐらぐら肉じゃが"] {
+    background: #FBE3CF;
+    color: #9A4B14;
+}
+
+.news-card__category[data-category="こねこねだんご"] {
+    background: #DCEFF7;
+    color: #1F6F8B;
+}
+
+.news-card__category[data-category="純純純豆腐"] {
+    background: #FDE0DD;
+    color: #B32A1E;
+}
+
+.news-card__category[data-category="揚げバウム"] {
+    background: #FBF0C4;
+    color: #8A6A12;
+}
 
 }

@@ -1,0 +1,18 @@
+{
+    "current": {
+        "image": "images/sample.jpg",
+        "caption": "coming soon..."
+    },
+    "posts": [
+        {
+            
+            "date": "",
+            "title": "",
+            "images": [
+                "images/sample.jpg",
+                "images/blog/meat_02.jpg"
+            ],
+            "text": ""
+        }
+    ]
+}

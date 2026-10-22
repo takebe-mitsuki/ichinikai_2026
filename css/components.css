@@ -905,5 +905,12 @@ Ver.2
     background: #FBF0C4;
     color: #8A6A12;
 }
+.news-card--pinned {
+    background-color: var(--color-mount-crayon);
+    box-shadow: inset 4px 0 0 var(--color-warm);
+}
 
+.news-card--pinned h3::before {
+    content: "📌 ";
+}
 }

@@ -68,6 +68,6 @@ function openBlogPost(post){
         category: "看板製作日記",
         title: post.title,
         date: post.date,
-        content: text + "<br><br>" + images
+        content: `<div class="blog-modal__text">${text}</div><br>` + images
     });
 }

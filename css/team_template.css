@@ -841,5 +841,7 @@ Ver.2
     }
 
 }
-
+.blog-modal__text {
+    color: #000;
+}
 }

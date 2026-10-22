@@ -29,23 +29,12 @@ document.addEventListener(
 
 async function loadSchedule(){
 
-
     const container =
-        document.querySelector(
-            "#schedule-list"
-        );
+        document.querySelector("#schedule-list");
 
-
-    if(!container){
-
-        return;
-
-    }
-
-
+    if(!container){ return; }
 
     try{
-
 
         const response =
             await fetch(
@@ -53,66 +42,75 @@ async function loadSchedule(){
                 { cache: "no-store" }
             );
 
-
         const scheduleData =
             await response.json();
 
-
-
         const today = new Date();
-
         today.setHours(0, 0, 0, 0);
 
+        const isToday = (item) => {
 
+            const start =
+                parseScheduleDate(
+                    item.start_date || item.end_date
+                );
+
+            const end =
+                parseScheduleDate(item.end_date);
+
+            return start <= today && today <= end;
+
+        };
+
+        const todayItems =
+            scheduleData.filter(isToday);
 
         const upcoming =
             scheduleData.filter(
-                (item) => {
-
-                    return (
-                        parseScheduleDate(item.end_date) >= today
-                    );
-
-                }
+                (item) =>
+                    parseScheduleDate(item.end_date) >= today &&
+                    !isToday(item)
             );
-
-
 
         const past =
             scheduleData.filter(
-                (item) => {
-
-                    return (
-                        parseScheduleDate(item.end_date) < today
-                    );
-
-                }
+                (item) =>
+                    parseScheduleDate(item.end_date) < today
             );
 
-
-
-        displaySchedule(
-            upcoming,
-            container
-        );
-
-
-
-        setupPastScheduleButton(
-            past
-        );
-
+        displayToday(todayItems);
+        displaySchedule(upcoming, container);
+        setupPastScheduleButton(past);
 
     }catch(error){
-
 
         console.error(
             "Schedule loading error:",
             error
         );
 
-
     }
+
+}
+
+function displayToday(items){
+
+    const section =
+        document.querySelector("#today");
+
+    const list =
+        document.querySelector("#today-list");
+
+    if(!section || !list || items.length === 0){
+        return;
+    }
+
+    items.forEach((item) => {
+        list.appendChild(createScheduleRow(item));
+    });
+
+    section.style.display = "";
+
 
 }
 

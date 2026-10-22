@@ -67,9 +67,19 @@ async function loadNews(){
 
 
 
+               const pinned =
+            sortedNews.filter((n) => n.pinned);
+
+        const normal =
+            sortedNews.filter((n) => !n.pinned);
+
+        const rest =
+            normal.slice(0, Math.max(5 - pinned.length, 0));
+
         displayNews(
-            sortedNews.slice(0, 5),
+            [...pinned, ...rest],
             newsList
+
         );
 
 
@@ -180,7 +190,13 @@ function displayNews(
             article.className =
                 "news-card";
 
+            if(news.pinned){
 
+                article.classList.add(
+                    "news-card--pinned"
+                );
+
+            }
 
             article.innerHTML = `
 

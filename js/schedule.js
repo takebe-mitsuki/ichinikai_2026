@@ -58,42 +58,67 @@ function parseScheduleDate(dateStr){
 
 function displayToday(){
 
-    const section = document.querySelector("#today");
-    const list = document.querySelector("#today-list");
-
-    if(!section || !list){ return; }
-
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
-    const items = calendarEvents.filter(
-        (e) => e.start <= today && today <= e.end
-    );
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
 
-    if(items.length === 0){ return; }
+    const isOn = (e, day) =>
+        e.start <= day && day <= e.end;
+
+    const todayItems =
+        calendarEvents.filter(
+            (e) => isOn(e, today)
+        );
+
+    const tomorrowItems =
+        calendarEvents.filter(
+            (e) => isOn(e, tomorrow) && !isOn(e, today)
+        );
+
+    renderPinCards("today", todayItems);
+    renderPinCards("tomorrow", tomorrowItems);
+
+    const section = document.querySelector("#today");
+
+    if(
+        section &&
+        (todayItems.length > 0 || tomorrowItems.length > 0)
+    ){
+        section.style.display = "";
+    }
+
+}
+
+function renderPinCards(key, items){
+
+    const block = document.querySelector(`#${key}-block`);
+    const list = document.querySelector(`#${key}-list`);
+
+    if(!block || !list || items.length === 0){ return; }
 
     items.forEach((e) => {
 
-        const row = document.createElement("div");
+        const card = document.createElement("article");
 
-        row.className = "schedule-item";
+        card.className = "pin-card";
 
-        row.style.cursor = "pointer";
-
-        row.innerHTML = `
+        card.innerHTML = `
             <time>${e.dateLabel}</time>
-            <p>${e.title}${e.time ? "(" + e.time + ")" : ""}</p>
+            <h3>${e.title}</h3>
+            ${e.time ? `<p>🕒 ${e.time}</p>` : ""}
         `;
 
-        row.addEventListener("click", () => {
+        card.addEventListener("click", () => {
             openScheduleEvent(e);
         });
 
-        list.appendChild(row);
+        list.appendChild(card);
 
     });
 
-    section.style.display = "";
+    block.style.display = "";
 
 }
 

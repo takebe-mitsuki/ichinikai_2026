@@ -87,7 +87,7 @@ Ver.2
 
     --max-width: 1200px;
 
-    --section-space: 140px;
+    --section-space: 70px;
 
 
 
@@ -101,7 +101,13 @@ Ver.2
         0.45s ease;
 
 }
+@media(max-width: 700px){
 
+    :root {
+        --section-space: 48px;
+    }
+
+}
 
 
 

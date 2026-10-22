@@ -162,14 +162,17 @@
 
 <section id="today" class="section today" style="display:none;">
 
-    <div class="section__heading">
-        <h2>本日の予定</h2>
+    <div class="today__block" id="today-block" style="display:none;">
+        <h2 class="today__title">本日の予定</h2>
+        <div class="pin-cards" id="today-list"></div>
     </div>
 
-    <div class="today__list" id="today-list"></div>
+    <div class="today__block" id="tomorrow-block" style="display:none;">
+        <h2 class="today__title">明日の予定</h2>
+        <div class="pin-cards" id="tomorrow-list"></div>
+    </div>
 
 </section>
-
 
 
 <section id="news" class="section news">

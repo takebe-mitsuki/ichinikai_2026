@@ -245,8 +245,12 @@ function displayTeamNews(
 
 function showNewsDetail(news){
 
+    document
+        .querySelector("#news-modal")
+        .classList.remove("is-blog");
 
     openNewsModal(news);
+
 
 
 }

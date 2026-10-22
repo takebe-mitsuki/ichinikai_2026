@@ -134,5 +134,8 @@ Ver.2
 .team-banner__back {
 
     color: #F2C43D;
-
+.blog-post time,
+.blog-post h3 {
+    color: var(--color-text);
+}
 }

@@ -63,7 +63,9 @@ function openBlogPost(post){
         .map((src) => `<img class="blog-modal__image" src="${src}" alt="">`)
         .join("");
     const text = (post.text || "").replace(/\n/g, "<br>");
-
+    document
+        .querySelector("#news-modal")
+        .classList.add("is-blog");
     openNewsModal({
         category: "看板製作日記",
         title: post.title,

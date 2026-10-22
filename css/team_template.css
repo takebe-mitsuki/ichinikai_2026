@@ -844,4 +844,15 @@ Ver.2
 .blog-modal__text {
     color: #000;
 }
+#news-modal.is-blog .news-modal__category,
+#news-modal.is-blog .news-modal__title,
+#news-modal.is-blog .news-modal__date,
+#news-modal.is-blog .news-modal__text {
+    color: #000;
+}
+
+.blog-post time,
+.blog-post h3 {
+    color: #000;
+}
 }

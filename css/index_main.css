@@ -365,6 +365,115 @@ Ver.2
         min-height: 0;
 
     }
+.calendar {
+    max-width: var(--max-width);
+    min-height: 560px;
+    margin: 0 auto;
+    padding: 24px;
+    background: var(--color-surface);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-small);
+}
 
+.calendar__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.calendar__title {
+    font-size: 20px;
+}
+
+.calendar__nav {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-mount-leaf);
+    color: var(--color-accent-dark);
+    font-size: 22px;
+    transition: var(--transition-fast);
+}
+
+.calendar__nav:hover {
+    opacity: 0.7;
+}
+
+.calendar__grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 4px;
+}
+
+.calendar__weekday {
+    padding: 4px 0;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-text-light);
+}
+
+.calendar__cell {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-height: 84px;
+    padding: 4px;
+    border-radius: 8px;
+    background: #FAFAF6;
+}
+
+.calendar__cell--empty {
+    background: none;
+}
+
+.calendar__cell--today {
+    box-shadow: inset 0 0 0 2px var(--color-warm);
+}
+
+.calendar__day {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-text-light);
+}
+
+.calendar__event {
+    display: block;
+    width: 100%;
+    padding: 2px 4px;
+    border-radius: 4px;
+    background: var(--color-mount-leaf);
+    color: var(--color-accent-dark);
+    font-size: 11px;
+    line-height: 1.4;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.calendar__event:hover {
+    opacity: 0.7;
+}
+
+@media(max-width: 700px){
+
+    .calendar {
+        min-height: 440px;
+        padding: 12px;
+    }
+
+    .calendar__cell {
+        min-height: 64px;
+        padding: 2px;
+    }
+
+    .calendar__event {
+        padding: 1px 2px;
+        font-size: 10px;
+    }
+
+}
 
 }

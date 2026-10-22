@@ -1,291 +1,207 @@
-/*
-========================================
+let calendarEvents = [];
+let viewYear;
+let viewMonth;
 
-Schedule System
-(今後の予定を一覧表示、過去の予定は
- ポップアップでまとめて表示)
-
-教育学部祭 いちにかい企画
-Ver.2
-
-========================================
-*/
-
-
-document.addEventListener(
-    "DOMContentLoaded",
-    () => {
-
-        loadSchedule();
-
-    }
-);
-
-
-
-
-
-
+document.addEventListener("DOMContentLoaded", () => {
+    loadSchedule();
+});
 
 async function loadSchedule(){
 
-    const container =
-        document.querySelector("#schedule-list");
+    const box = document.querySelector("#calendar");
 
-    if(!container){ return; }
+    if(!box){ return; }
 
     try{
 
-        const response =
-            await fetch(
-                "data/schedule.json",
-                { cache: "no-store" }
-            );
+        const response = await fetch(
+            "data/schedule.json",
+            { cache: "no-store" }
+        );
 
-        const scheduleData =
-            await response.json();
+        const scheduleData = await response.json();
+
+        calendarEvents = scheduleData.map((item) => ({
+            title: item.title || (item.teams || []).join("・"),
+            dateLabel: item.date || "",
+            start: parseScheduleDate(item.start_date || item.end_date),
+            end: parseScheduleDate(item.end_date),
+            time: item.time || "",
+            detail: item.detail || ""
+        }));
 
         const today = new Date();
-        today.setHours(0, 0, 0, 0);
+        viewYear = today.getFullYear();
+        viewMonth = today.getMonth();
 
-        const isToday = (item) => {
-
-            const start =
-                parseScheduleDate(
-                    item.start_date || item.end_date
-                );
-
-            const end =
-                parseScheduleDate(item.end_date);
-
-            return start <= today && today <= end;
-
-        };
-
-        const todayItems =
-            scheduleData.filter(isToday);
-
-        const upcoming =
-            scheduleData.filter(
-                (item) =>
-                    parseScheduleDate(item.end_date) >= today &&
-                    !isToday(item)
-            );
-
-        const past =
-            scheduleData.filter(
-                (item) =>
-                    parseScheduleDate(item.end_date) < today
-            );
-
-        displayToday(todayItems);
-        displaySchedule(upcoming, container);
-        setupPastScheduleButton(past);
+        displayToday();
+        renderCalendar();
 
     }catch(error){
 
-        console.error(
-            "Schedule loading error:",
-            error
-        );
+        console.error("Schedule loading error:", error);
 
     }
 
 }
 
-function displayToday(items){
+function parseScheduleDate(dateStr){
 
-    const section =
-        document.querySelector("#today");
+    const [year, month, day] =
+        dateStr.split(".").map(Number);
 
-    const list =
-        document.querySelector("#today-list");
+    return new Date(year, month - 1, day);
 
-    if(!section || !list || items.length === 0){
-        return;
-    }
+}
 
-    items.forEach((item) => {
-        list.appendChild(createScheduleRow(item));
+/* 本日の予定(お知らせの上のブロック) */
+
+function displayToday(){
+
+    const section = document.querySelector("#today");
+    const list = document.querySelector("#today-list");
+
+    if(!section || !list){ return; }
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const items = calendarEvents.filter(
+        (e) => e.start <= today && today <= e.end
+    );
+
+    if(items.length === 0){ return; }
+
+    items.forEach((e) => {
+
+        const row = document.createElement("div");
+
+        row.className = "schedule-item";
+
+        row.style.cursor = "pointer";
+
+        row.innerHTML = `
+            <time>${e.dateLabel}</time>
+            <p>${e.title}${e.time ? "(" + e.time + ")" : ""}</p>
+        `;
+
+        row.addEventListener("click", () => {
+            openScheduleEvent(e);
+        });
+
+        list.appendChild(row);
+
     });
 
     section.style.display = "";
 
-
 }
 
+/* カレンダー本体 */
 
+function renderCalendar(){
 
+    const box = document.querySelector("#calendar");
 
+    const firstWeekday =
+        new Date(viewYear, viewMonth, 1).getDay();
 
+    const lastDate =
+        new Date(viewYear, viewMonth + 1, 0).getDate();
 
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
 
-function parseScheduleDate(dateStr){
+    const weekdays = ["日", "月", "火", "水", "木", "金", "土"];
 
-
-    const [year, month, day] =
-        dateStr
-            .split(".")
-            .map(Number);
-
-
-    return new Date(
-        year,
-        month - 1,
-        day
-    );
-
-
-}
-
-
-
-
-
-
-
-function displaySchedule(
-    scheduleData,
-    container
-){
-
-
-    if(scheduleData.length === 0){
-
-
-        container.innerHTML =
-            `<div class="schedule-item"><p>現在、予定されているスケジュールはありません。</p></div>`;
-
-
-        return;
-
-    }
-
-
-
-    scheduleData.forEach(
-        (item)=>{
-
-
-            container.appendChild(
-                createScheduleRow(item)
-            );
-
-
-        }
-    );
-
-}
-
-
-
-
-
-
-
-function createScheduleRow(item){
-
-
-    const div =
-        document.createElement(
-            "div"
-        );
-
-
-    div.className =
-        "schedule-item";
-
-
-
-    div.innerHTML = `
-
-        <time>
-
-            ${item.date}
-
-        </time>
-
-
-        <p>
-
-            ${item.teams.join("<br>")}
-
-        </p>
-
+    let html = `
+        <div class="calendar__head">
+            <button type="button" class="calendar__nav" id="calendar-prev" aria-label="前の月">‹</button>
+            <h3 class="calendar__title">${viewYear}年${viewMonth + 1}月</h3>
+            <button type="button" class="calendar__nav" id="calendar-next" aria-label="次の月">›</button>
+        </div>
+        <div class="calendar__grid">
+            ${weekdays.map((d) => `<div class="calendar__weekday">${d}</div>`).join("")}
     `;
 
+    for(let i = 0; i < firstWeekday; i++){
+        html += `<div class="calendar__cell calendar__cell--empty"></div>`;
+    }
 
-    return div;
+    for(let d = 1; d <= lastDate; d++){
+
+        const day = new Date(viewYear, viewMonth, d);
+
+        const isToday = day.getTime() === today.getTime();
+
+        const chips = calendarEvents
+            .map((e, index) => ({ e, index }))
+            .filter(({ e }) => e.start <= day && day <= e.end)
+            .map(({ e, index }) =>
+                `<button type="button" class="calendar__event" data-index="${index}">${e.title}</button>`
+            )
+            .join("");
+
+        html += `
+            <div class="calendar__cell${isToday ? " calendar__cell--today" : ""}">
+                <span class="calendar__day">${d}</span>
+                ${chips}
+            </div>
+        `;
+
+    }
+
+    html += `</div>`;
+
+    box.innerHTML = html;
+
+    box.querySelector("#calendar-prev")
+        .addEventListener("click", () => { changeMonth(-1); });
+
+    box.querySelector("#calendar-next")
+        .addEventListener("click", () => { changeMonth(1); });
+
+    box.querySelectorAll(".calendar__event").forEach((btn) => {
+        btn.addEventListener("click", () => {
+            openScheduleEvent(
+                calendarEvents[Number(btn.dataset.index)]
+            );
+        });
+    });
 
 }
 
+function changeMonth(diff){
 
+    viewMonth += diff;
 
+    if(viewMonth < 0){ viewMonth = 11; viewYear--; }
 
+    if(viewMonth > 11){ viewMonth = 0; viewYear++; }
 
+    renderCalendar();
 
+}
 
-/*
-過去のスケジュールが1件以上あるときだけ
-「過去のスケジュールはこちら」ボタンを表示する。
-*/
+/* タップしたときのポップアップ(お知らせと同じもの) */
 
+function openScheduleEvent(e){
 
-function setupPastScheduleButton(pastItems){
+    const parts = [];
 
+    if(e.time){ parts.push("🕒 " + e.time); }
 
-    const wrapper =
-        document.querySelector(
-            "#schedule-more"
-        );
+    if(e.detail){ parts.push(e.detail.replace(/\n/g, "<br>")); }
 
-
-    const button =
-        document.querySelector(
-            "#schedule-more-toggle"
-        );
-
-
-    if(!wrapper || !button){
-
-        return;
-
+    if(parts.length === 0){
+        parts.push("詳細は決まり次第お知らせします。");
     }
 
-
-
-    if(pastItems.length === 0){
-
-
-        wrapper.style.display =
-            "none";
-
-
-        return;
-
-    }
-
-
-
-    wrapper.style.display = "";
-
-
-
-    button.addEventListener(
-
-        "click",
-
-        () => {
-
-
-            openScheduleModal(
-                pastItems
-            );
-
-
-        }
-
-    );
-
+    openNewsModal({
+        category: "スケジュール",
+        title: e.title,
+        date: e.dateLabel,
+        content: parts.join("<br><br>")
+    });
 
 }

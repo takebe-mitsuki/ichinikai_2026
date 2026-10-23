@@ -499,8 +499,9 @@ Ver.2
 
 .pin-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 320px));
     gap: 28px 24px;
+    justify-content: start;
 }
 
 .pin-card {
@@ -558,4 +559,16 @@ Ver.2
     font-size: 14px;
     color: var(--color-text-light);
 }
+@media(min-width: 901px){
 
+    .calendar__cell {
+        min-height: 110px;
+        padding: 6px;
+    }
+
+    .calendar__event {
+        padding: 3px 6px;
+        font-size: 12px;
+    }
+
+}

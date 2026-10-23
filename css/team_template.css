@@ -763,6 +763,7 @@ Ver.2
             drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
 
     }
+}
 .blog-current,
 .blog-posts {
     max-width: var(--max-width);
@@ -785,6 +786,11 @@ Ver.2
     height: auto;
     border-radius: var(--radius-medium);
     box-shadow: var(--shadow-small);
+}
+.blog-current__caption {
+    margin-top: 12px;
+    color: var(--color-text-light);
+    white-space: pre-line;
 }
 
 .blog-posts {
@@ -851,5 +857,5 @@ Ver.2
     color: #000;
 }
 
-}
+
 

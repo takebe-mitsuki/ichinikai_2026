@@ -365,6 +365,7 @@ Ver.2
         min-height: 0;
 
     }
+}
 .calendar {
     max-width: var(--max-width);
     min-height: 560px;
@@ -557,4 +558,4 @@ Ver.2
     font-size: 14px;
     color: var(--color-text-light);
 }
-}
+

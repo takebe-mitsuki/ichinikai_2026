@@ -7,15 +7,9 @@
             {
                 "name": "肉じゃが",
                 "price": "300円",
-                "image": "images/menu/meat_01.jpg",
-                "description": "ほくほくのじゃがいもが自慢です。\n改行はこのように書けます。",
-                "toppings": ["卵 +50円", "お肉増し +100円"]
-            },
-            {
-                "name": "ミニ肉じゃが",
-                "price": "200円",
-                "image": "images/menu/meat_02.jpg",
-                "description": "小さめサイズです。"
+                "image": "images/sample.jpg",
+                "description": "coming soon...",
+                "toppings": [""]
             }
         ]
     },
@@ -25,17 +19,11 @@
         "color": "#5EB8D9",
         "items": [
             {
-                "name": "肉じゃが",
+                "name": "こねこねだんご",
                 "price": "300円",
-                "image": "images/menu/meat_01.jpg",
-                "description": "ほくほくのじゃがいもが自慢です。\n改行はこのように書けます。",
-                "toppings": ["卵 +50円", "お肉増し +100円"]
-            },
-            {
-                "name": "ミニ肉じゃが",
-                "price": "200円",
-                "image": "images/menu/meat_02.jpg",
-                "description": "小さめサイズです。"
+                "image": "images/sample.jpg",
+                "description": "coming soon...",
+                "toppings": [""]
             }
         ]
     },
@@ -45,17 +33,11 @@
         "color": "#E8402E",
         "items": [
             {
-                "name": "肉じゃが",
+                "name": "スンドゥブ",
                 "price": "300円",
-                "image": "images/menu/meat_01.jpg",
-                "description": "ほくほくのじゃがいもが自慢です。\n改行はこのように書けます。",
-                "toppings": ["卵 +50円", "お肉増し +100円"]
-            },
-            {
-                "name": "ミニ肉じゃが",
-                "price": "200円",
-                "image": "images/menu/meat_02.jpg",
-                "description": "小さめサイズです。"
+                "image": "images/sample.jpg",
+                "description": "coming soon...",
+                "toppings": []
             }
         ]
     },
@@ -65,17 +47,11 @@
         "color": "#F2B33D",
         "items": [
             {
-                "name": "肉じゃが",
+                "name": "揚げバウム",
                 "price": "300円",
-                "image": "images/menu/meat_01.jpg",
-                "description": "ほくほくのじゃがいもが自慢です。\n改行はこのように書けます。",
-                "toppings": ["卵 +50円", "お肉増し +100円"]
-            },
-            {
-                "name": "ミニ肉じゃが",
-                "price": "200円",
-                "image": "images/menu/meat_02.jpg",
-                "description": "小さめサイズです。"
+                "image": "images/sample.jpg",
+                "description": "coming soon...",
+                "toppings": ["coming soon...", "あのひまで..."]
             }
         ]
     }

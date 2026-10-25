@@ -6,13 +6,12 @@
     "posts": [
         {
             
-            "date": "2026.10.22",
-            "title": "テスト投稿",
+            "date": "",
+            "title": "",
             "images": [
-                "images/sample.jpg",
-                "images/blog/meat_02.jpg"
+                "images/sample.jpg"
             ],
-            "text": "こんな感じで投稿できたらいいな"
+            "text": ""
         }
     ]
 }

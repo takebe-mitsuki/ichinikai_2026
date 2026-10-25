@@ -615,3 +615,50 @@ Ver.2
 }
 
 }
+#today {
+    display: flex;
+    gap: 24px;
+    max-width: calc(var(--max-width) + 48px);
+    margin: 0 auto;
+}
+
+.today__block,
+.today__block + .today__block {
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 0;
+}
+
+.pin-cards {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 320px));
+}
+
+@media(max-width: 700px){
+
+    #today {
+        gap: 12px;
+    }
+
+    .pin-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .pin-card {
+        padding: 24px 12px 14px;
+    }
+
+    .pin-card h3 {
+        font-size: 15px;
+    }
+
+    .pin-card time {
+        font-size: 11px;
+    }
+
+    .today__title {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+}

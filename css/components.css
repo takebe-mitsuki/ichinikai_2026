@@ -913,4 +913,29 @@ Ver.2
 .news-card--pinned h3::before {
     content: "📌 ";
 }
+@media(max-width: 900px){
+
+    .about__content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .about-item {
+        padding: 16px 12px;
+    }
+
+    .about-item h3 {
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+
+    .about-item p {
+        font-size: 13px;
+    }
+
+    .about-item:nth-child(3) {
+        grid-column: 1 / -1;
+    }
+
+}
 }

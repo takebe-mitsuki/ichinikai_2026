@@ -1,0 +1,82 @@
+[
+    {
+        "team": "ぐらぐら肉じゃが班",
+        "days": "1・2日目",
+        "color": "#D97B2E",
+        "items": [
+            {
+                "name": "肉じゃが",
+                "price": "300円",
+                "image": "images/menu/meat_01.jpg",
+                "description": "ほくほくのじゃがいもが自慢です。\n改行はこのように書けます。",
+                "toppings": ["卵 +50円", "お肉増し +100円"]
+            },
+            {
+                "name": "ミニ肉じゃが",
+                "price": "200円",
+                "image": "images/menu/meat_02.jpg",
+                "description": "小さめサイズです。"
+            }
+        ]
+    },
+    {
+        "team": "こねこねだんご班",
+        "days": "1・2日目",
+        "color": "#5EB8D9",
+        "items": [
+            {
+                "name": "肉じゃが",
+                "price": "300円",
+                "image": "images/menu/meat_01.jpg",
+                "description": "ほくほくのじゃがいもが自慢です。\n改行はこのように書けます。",
+                "toppings": ["卵 +50円", "お肉増し +100円"]
+            },
+            {
+                "name": "ミニ肉じゃが",
+                "price": "200円",
+                "image": "images/menu/meat_02.jpg",
+                "description": "小さめサイズです。"
+            }
+        ]
+    },
+    {
+        "team": "純純純豆腐班",
+        "days": "3・4日目",
+        "color": "#E8402E",
+        "items": [
+            {
+                "name": "肉じゃが",
+                "price": "300円",
+                "image": "images/menu/meat_01.jpg",
+                "description": "ほくほくのじゃがいもが自慢です。\n改行はこのように書けます。",
+                "toppings": ["卵 +50円", "お肉増し +100円"]
+            },
+            {
+                "name": "ミニ肉じゃが",
+                "price": "200円",
+                "image": "images/menu/meat_02.jpg",
+                "description": "小さめサイズです。"
+            }
+        ]
+    },
+    {
+        "team": "揚げバウム班",
+        "days": "3・4日目",
+        "color": "#F2B33D",
+        "items": [
+            {
+                "name": "肉じゃが",
+                "price": "300円",
+                "image": "images/menu/meat_01.jpg",
+                "description": "ほくほくのじゃがいもが自慢です。\n改行はこのように書けます。",
+                "toppings": ["卵 +50円", "お肉増し +100円"]
+            },
+            {
+                "name": "ミニ肉じゃが",
+                "price": "200円",
+                "image": "images/menu/meat_02.jpg",
+                "description": "小さめサイズです。"
+            }
+        ]
+    }
+]

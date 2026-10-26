@@ -17,21 +17,19 @@ async function loadMenu(){
 
         const teams = await response.json();
 
-        tabs.innerHTML = teams.map((t, i) => `
-            <button type="button" class="menu-tab" data-index="${i}"
-                style="--team-color:${t.color || "#888"}">
-                <small>${t.days || ""}</small>
-                <span>${t.team}</span>
-            </button>
+        const days = [...new Set(teams.map((t) => t.days))];
+
+        tabs.innerHTML = days.map((d, i) => `
+            <button type="button" class="menu-tab" data-index="${i}">${d}</button>
         `).join("");
 
         tabs.querySelectorAll(".menu-tab").forEach((btn) => {
             btn.addEventListener("click", () => {
-                showMenuTeam(teams, Number(btn.dataset.index));
+                showMenuDay(teams, days, Number(btn.dataset.index));
             });
         });
 
-        showMenuTeam(teams, 0);
+        showMenuDay(teams, days, 0);
 
     }catch(error){
 
@@ -41,48 +39,58 @@ async function loadMenu(){
 
 }
 
-function showMenuTeam(teams, index){
-
-    const team = teams[index];
-
-    const list = document.querySelector("#menu-list");
+function showMenuDay(teams, days, index){
 
     document.querySelectorAll(".menu-tab").forEach((b, i) => {
         b.classList.toggle("is-active", i === index);
     });
 
-    list.style.setProperty("--team-color", team.color || "#888");
+    const list = document.querySelector("#menu-list");
 
     list.innerHTML = "";
 
-    const items = team.items || [];
+    teams
+        .filter((t) => t.days === days[index])
+        .forEach((team) => {
 
-    if(items.length === 0){
-        list.innerHTML = `<p class="menu__empty">メニューは準備中です。</p>`;
-        return;
-    }
+            const col = document.createElement("section");
 
-    items.forEach((item) => {
+            col.className = "menu-team";
 
-        const row = document.createElement("article");
+            col.style.setProperty("--team-color", team.color || "#888");
 
-        row.className = "menu-item";
+            col.innerHTML = `<h3 class="menu-team__name">${team.team}</h3>`;
 
-        row.innerHTML = `
-            ${item.image ? `<img src="${item.image}" alt="${item.name}">` : "<span></span>"}
-            <div>
-                <h3>${item.name}</h3>
-                <p class="menu-item__price">${item.price || ""}</p>
-            </div>
-        `;
+            const items = team.items || [];
 
-        row.addEventListener("click", () => {
-            openMenuItem(team, item);
+            if(items.length === 0){
+                col.innerHTML += `<p class="menu__empty">メニューは準備中です。</p>`;
+            }
+
+            items.forEach((item) => {
+
+                const card = document.createElement("article");
+
+                card.className = "menu-card";
+
+                card.innerHTML = `
+                    ${item.image ? `<img src="${item.image}" alt="${item.name}">` : ""}
+                    <h4>${item.name}</h4>
+                    <p class="menu-card__price">${item.price || ""}</p>
+                    <button type="button" class="menu-card__button">詳細はこちら</button>
+                `;
+
+                card.querySelector("button").addEventListener("click", () => {
+                    openMenuItem(team, item);
+                });
+
+                col.appendChild(card);
+
+            });
+
+            list.appendChild(col);
+
         });
-
-        list.appendChild(row);
-
-    });
 
 }
 

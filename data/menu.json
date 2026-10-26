@@ -49,7 +49,7 @@
             {
                 "name": "揚げバウムクーヘン",
                 "price": "...円",
-                "image": "images/age/recipe_age.jpg",
+                "image": "images/age/recipe.jpg",
                 "description": "色々な味があって愛情が込められています！",
                 "toppings": ["あんこ", "メープル","チョコ","プレーン"]
             }

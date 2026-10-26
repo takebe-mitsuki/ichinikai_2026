@@ -6,7 +6,7 @@
         "items": [
             {
                 "name": "肉じゃが",
-                "price": "300円",
+                "price": "...円",
                 "image": "images/sample.jpg",
                 "description": "coming soon...",
                 "toppings": [""]
@@ -34,7 +34,7 @@
         "items": [
             {
                 "name": "スンドゥブ",
-                "price": "300円",
+                "price": "...円",
                 "image": "images/sample.jpg",
                 "description": "coming soon...",
                 "toppings": []

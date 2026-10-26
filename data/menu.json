@@ -20,10 +20,10 @@
         "items": [
             {
                 "name": "こねこねだんご",
-                "price": "300円",
-                "image": "images/sample.jpg",
-                "description": "coming soon...",
-                "toppings": [""]
+                "price": "...円",
+                "image": "images/dango/recipe_dango.jpg",
+                "description": "ひとつひとつ粉から手作り！愛情がこもっています！",
+                "toppings": ["味噌だれ", "あんこホイップ", "たこ焼き風"]
             }
         ]
     },
@@ -47,11 +47,11 @@
         "color": "#F2B33D",
         "items": [
             {
-                "name": "揚げバウム",
-                "price": "300円",
-                "image": "images/sample.jpg",
-                "description": "coming soon...",
-                "toppings": ["coming soon...", "あのひまで..."]
+                "name": "揚げバウムクーヘン",
+                "price": "...円",
+                "image": "images/age/recipe_age.jpg",
+                "description": "色々な味があって愛情が込められています！",
+                "toppings": ["あんこ", "メープル","チョコ","プレーン"]
             }
         ]
     }

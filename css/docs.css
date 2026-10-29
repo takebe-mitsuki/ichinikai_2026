@@ -1,0 +1,240 @@
+.docs-fab {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 90;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-fast);
+}
+
+.docs-fab:hover {
+    transform: scale(1.08);
+}
+
+.docs-fab img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.docs {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.docs.is-open {
+    display: flex;
+}
+
+.docs [hidden] {
+    display: none !important;
+}
+
+.docs__card {
+    width: min(420px, 100%);
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 32px 28px;
+    background: #fff;
+    border-radius: var(--radius-medium);
+    text-align: center;
+}
+
+.docs__card h2 {
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+
+.docs__notes {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--color-text-light);
+    text-align: left;
+}
+
+.docs__notes li::before {
+    content: "・";
+}
+
+.docs__input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+    font-size: 24px;
+    letter-spacing: 0.6em;
+    text-align: center;
+}
+
+.docs__error {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #D93A2B;
+}
+
+.docs__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.docs__main,
+.docs__sub {
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.docs__main {
+    background: var(--color-accent-dark);
+    color: #fff;
+}
+
+.docs__sub {
+    border: 1px solid var(--color-border);
+    color: var(--color-text-light);
+}
+
+.docs__choices {
+    display: grid;
+    gap: 12px;
+}
+
+.docs__choice {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border: 2px solid var(--color-accent-dark);
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-accent-dark);
+    transition: var(--transition-fast);
+}
+
+.docs__choice:hover {
+    background: var(--color-accent-dark);
+    color: #fff;
+}
+
+.docs__viewer {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    background: #111;
+    color: #fff;
+}
+
+.docs__bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    font-size: 14px;
+}
+
+.docs__bar button {
+    color: #fff;
+    font-size: 14px;
+}
+
+#docs-title {
+    flex: 1;
+    overflow: hidden;
+    font-weight: 700;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.docs__toc {
+    position: absolute;
+    top: 48px;
+    right: 12px;
+    z-index: 2;
+    min-width: 220px;
+    max-height: 60%;
+    overflow-y: auto;
+    padding: 8px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--shadow-medium);
+}
+
+.docs__toc button {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: var(--color-text);
+    font-size: 14px;
+    text-align: left;
+}
+
+.docs__toc button:hover {
+    background: var(--color-mount-leaf);
+}
+
+.docs__scroller {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.docs__scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.docs__page {
+    position: relative;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.docs__page img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+}
+
+.docs__nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 14px;
+}
+
+.docs__nav button {
+    padding: 8px 20px;
+    border: 1px solid #666;
+    border-radius: 999px;
+    color: #fff;
+    font-size: 14px;
+}

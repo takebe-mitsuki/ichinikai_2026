@@ -1,0 +1,24 @@
+{
+    "password": "1234",
+    "docs": [
+        {
+            "title": "マニュアル",
+            "folder": "images/docs/manual/",
+            "count": 20,
+            "ext": "jpg",
+            "rtl": false,
+            "toc": [
+                { "title": "はじめに", "page": 2 },
+                { "title": "当日の流れ", "page": 5 }
+            ]
+        },
+        {
+            "title": "プロフ帳",
+            "folder": "images/docs/profile/",
+            "count": 12,
+            "ext": "jpg",
+            "rtl": false,
+            "toc": []
+        }
+    ]
+}

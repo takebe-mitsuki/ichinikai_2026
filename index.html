@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index_main.css">
+        <link rel="stylesheet" href="css/docs.css">
 
 </head>
 
@@ -481,7 +482,68 @@
 
 </footer>
 
+<button type="button" class="docs-fab" id="docs-fab" aria-label="資料を開く">
+    <img src="images/icon.jpg" alt="">
+</button>
 
+<div class="docs" id="docs">
+
+    <section class="docs__card" id="docs-notice">
+        <h2>ご利用にあたって</h2>
+        <ul class="docs__notes">
+            <li>この資料は、いちにかい企画の関係者向けです。</li>
+            <li>内容の転載・スクリーンショットの共有・外部への持ち出しはしないでください。</li>
+            <li>パスワードは他の人に教えないでください。</li>
+        </ul>
+        <div class="docs__buttons">
+            <button type="button" class="docs__sub" data-docs-close>やめる</button>
+            <button type="button" class="docs__main" id="docs-agree">同意して進む</button>
+        </div>
+    </section>
+
+    <section class="docs__card" id="docs-pass" hidden>
+        <h2>パスワード</h2>
+        <input
+            id="docs-pass-input"
+            class="docs__input"
+            type="password"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            maxlength="4"
+            autocomplete="off"
+            placeholder="数字4桁"
+        >
+        <p class="docs__error" id="docs-pass-error" hidden></p>
+        <div class="docs__buttons">
+            <button type="button" class="docs__sub" data-docs-close>やめる</button>
+        </div>
+    </section>
+
+    <section class="docs__card" id="docs-select" hidden>
+        <h2>見たい資料を選んでください</h2>
+        <div class="docs__choices" id="docs-select-list"></div>
+        <div class="docs__buttons">
+            <button type="button" class="docs__sub" data-docs-close>閉じる</button>
+        </div>
+    </section>
+
+    <section class="docs__viewer" id="docs-viewer" hidden>
+        <div class="docs__bar">
+            <button type="button" id="docs-back">← 一覧</button>
+            <span id="docs-title"></span>
+            <span id="docs-counter"></span>
+            <button type="button" id="docs-toc-btn">目次</button>
+            <button type="button" data-docs-close>✕</button>
+        </div>
+        <div class="docs__toc" id="docs-toc" hidden></div>
+        <div class="docs__scroller" id="docs-scroller"></div>
+        <div class="docs__nav" id="docs-nav">
+            <button type="button" id="docs-prev">前へ</button>
+            <button type="button" id="docs-next">次へ</button>
+        </div>
+    </section>
+
+</div>
 
 
 
@@ -493,6 +555,7 @@
 <script src="js/members.js"></script>
 <script src="js/teams.js"></script>
 <script src="js/schedule.js"></script>
+<script src="js/docs.js"></script>
 
 
 

@@ -1,13 +1,13 @@
 {
     "current": {
-        "image": "images/sample.jpg",
-        "caption": "coming soon..."
+        "image": "images/blog/meat01.jpg",
+        "caption": "看板のパーツと土台を作りました！"
     },
     "posts": [
         {
             
-            "date": "",
-            "title": "",
+            "date": "2026.10.29",
+            "title": "看板のパーツと土台を作りました！",
             "images": [
                 "images/blog/meat01.jpg"
             ],

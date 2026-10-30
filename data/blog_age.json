@@ -1,7 +1,7 @@
 {
     "current": {
-        "image": "images/sample.jpg",
-        "caption": "coming soon..."
+        "image": "images/blog/age03.jpg",
+        "caption": "VIVANT風の看板作ってます！"
     },
     "posts": [
         {
@@ -13,6 +13,19 @@
                 "images/blog/age02.jpg"
             ],
             "text": ""
+        },
+       
+        {
+            
+            "date": "2026.10.30",
+            "title": "看板づくり始めました！",
+            "images": [
+                "images/blog/age03.jpg",
+                "images/blog/age04.jpg",
+                "images/blog/age05.jpg"
+                
+            ],
+            "text": "VIVANT風の看板作ってます！"
         }
     ]
 }

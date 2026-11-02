@@ -1,7 +1,7 @@
 {
     "current": {
-        "image": "images/blog/meat01.jpg",
-        "caption": "看板のパーツと土台を作りました！"
+        "image": "images/blog/meat02.jpg",
+        "caption": "看板がちょっとずつできています！"
     },
     "posts": [
         {
@@ -12,6 +12,15 @@
                 "images/blog/meat01.jpg"
             ],
             "text": "色画用紙を切ってパーツを作りました！"
+        },
+         {
+            
+            "date": "2026.11.2",
+            "title": "具材の顔を描きました！",
+            "images": [
+                "images/blog/meat02.jpg"
+            ],
+            "text": "値段のところで使う０も作りました！"
         }
     ]
 }

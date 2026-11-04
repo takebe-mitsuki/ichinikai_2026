@@ -1,16 +1,15 @@
 {
     "current": {
-        "image": "images/sample.jpg",
-        "caption": "coming soon..."
+        "image": "images/blog/tofu02.jpg",
+        "caption": ""
     },
     "posts": [
         {
             
-            "date": "",
-            "title": "",
+            "date": "2026.11.4",
+            "title": "段ボール回収しました！",
             "images": [
-                "images/sample.jpg",
-                "images/blog/meat_02.jpg"
+                "images/blog/tofu01.jpg"
             ],
             "text": ""
         }

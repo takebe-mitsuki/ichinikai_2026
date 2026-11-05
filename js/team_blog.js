@@ -21,15 +21,28 @@ async function loadTeamBlog(){
 }
 
 function displayBlogCurrent(current, box){
-    if(!current || !current.image){
+
+    const list = Array.isArray(current)
+        ? current
+        : (current ? [current] : []);
+
+    const valid = list.filter((c) => c && c.image);
+
+    if(valid.length === 0){
         box.style.display = "none";
         return;
     }
-    box.innerHTML = `
-        <h3 class="blog__subtitle">現在の状況</h3>
-        <img class="blog-current__image" src="${current.image}" alt="現在の状況">
-        ${current.caption ? `<p class="blog-current__caption">${current.caption}</p>` : ""}
-    `;
+
+    box.innerHTML =
+        `<h3 class="blog__subtitle">現在の状況</h3>` +
+        valid.map((c) => `
+            <div class="blog-current__item">
+                ${c.label ? `<p class="blog-current__label">${c.label}</p>` : ""}
+                <img class="blog-current__image" src="${c.image}" alt="${c.label || "現在の状況"}">
+                ${c.caption ? `<p class="blog-current__caption">${c.caption}</p>` : ""}
+            </div>
+        `).join("");
+
 }
 
 function parseBlogDate(dateStr){

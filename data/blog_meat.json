@@ -1,8 +1,14 @@
 {
-    "current": {
-        "image": "images/blog/meat02.jpg",
+    "current": [
+    {
+        "image": "images/blog/meat05.jpg",
         "caption": "看板がちょっとずつできています！"
     },
+    {
+        "image": "images/blog/meat04.jpg",
+        "caption": "鍋の被り物を作り始めました！"
+    }
+],
     "posts": [
         {
             
@@ -21,6 +27,18 @@
                 "images/blog/meat02.jpg"
             ],
             "text": "値段のところで使う０も作りました！"
+        },
+        {
+            
+            "date": "2026.11.5",
+            "title": "被り物を作り始めました！",
+            "images": [
+                "images/blog/meat03.jpg",
+                "images/blog/meat04.jpg",
+                "images/blog/meat05.jpg"
+            ],
+            "text": "看板もちょっとずつできてきてます！"
         }
+
     ]
 }

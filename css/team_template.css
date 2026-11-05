@@ -856,6 +856,15 @@ Ver.2
 #news-modal.is-blog .news-modal__text {
     color: #000;
 }
+.blog-current__item + .blog-current__item {
+    margin-top: 32px;
+}
 
+.blog-current__label {
+    margin-bottom: 8px;
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+}
 
 

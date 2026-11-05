@@ -1,7 +1,7 @@
 {
     "current": {
-        "image": "images/blog/tofu02.jpg",
-        "caption": ""
+        "image": "images/blog/tofu04.jpg",
+        "caption": "具材を作ってます！"
     },
     "posts": [
         {
@@ -12,6 +12,16 @@
                 "images/blog/tofu01.jpg"
             ],
             "text": ""
+        },
+        {
+            
+            "date": "2026.11.5",
+            "title": "看板作り始めました！",
+            "images": [
+                "images/blog/tofu03.jpg",
+                "images/blog/tofu04.jpg"
+            ],
+            "text": "具材を切って色を塗りました！"
         }
     ]
 }

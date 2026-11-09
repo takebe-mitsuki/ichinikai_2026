@@ -1,8 +1,8 @@
 {
     "current": [
     {
-        "image": "images/blog/meat05.jpg",
-        "caption": "看板がちょっとずつできています！"
+        "image": "images/blog/meat09.jpg",
+        "caption": "看板一つ目できました！"
     },
     {
         "image": "images/blog/meat06.jpg",
@@ -38,6 +38,16 @@
                 "images/blog/meat05.jpg"
             ],
             "text": "看板もちょっとずつできてきてます！"
+        },
+        {
+            
+            "date": "2026.11.9",
+            "title": "看板一つ目できました！",
+            "images": [
+                "images/blog/meat08.jpg",
+                "images/blog/meat09.jpg"
+            ],
+            "text": "看板一個目完成しました‼️<br>また2個目も作っていきます！"
         }
 
     ]

@@ -100,7 +100,7 @@ async function loadTeamNews(){
 
 
         displayTeamNews(
-            sorted.slice(0, 3),
+            sorted.slice(0, 5),
             container
         );
 

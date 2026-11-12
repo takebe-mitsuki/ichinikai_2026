@@ -65,24 +65,7 @@
                 </a>
             </li>
 
-            <li>
-                <a href="#leaders">
-                    班長・副班長紹介
-                </a>
-            </li>
-
-            <li>
-                <a href="#recipe">
-                    レシピ
-                </a>
-            </li>
-
-            <li>
-                <a href="#blog">
-                    看板製作日記
-                </a>
-            </li>
-
+           
             <li>
                 <a href="index.html">
                     トップページ
@@ -210,52 +193,31 @@
 
 
 
-<section id="leaders" class="section">
+<section id="portal" class="section">
 
-    <div class="section__heading">
+       <div class="portal-tiles">
 
-        <h2>
-            班長・副班長紹介
-        </h2>
+        <a class="portal-tile" data-page="leaders">
+            <img class="portal-tile__image" alt="">
+            <span class="portal-tile__label">班長・副班長</span>
+        </a>
 
-    </div>
+        <a class="portal-tile" data-page="recipe">
+            <img class="portal-tile__image" alt="">
+            <span class="portal-tile__label">レシピ</span>
+        </a>
 
+        <a class="portal-tile" data-page="blog">
+            <img class="portal-tile__image" alt="">
+            <span class="portal-tile__label">看板製作日記</span>
+        </a>
 
-    <div class="team-leaders__grid" id="leaders-list">
-
-    </div>
-
-
-</section>
-
-
-
-<section id="recipe" class="section">
-
-    <div class="section__heading">
-
-        <h2>
-            レシピ
-        </h2>
+        <a class="portal-tile" data-page="shift">
+            <img class="portal-tile__image" alt="">
+            <span class="portal-tile__label">シフト</span>
+        </a>
 
     </div>
-
-
-    <div class="recipe__list" id="recipe-list">
-
-    </div>
-
-
-</section>
-<section id="blog" class="section">
-
-    <div class="section__heading">
-        <h2>看板製作日記</h2>
-    </div>
-
-    <div class="blog-current" id="blog-current"></div>
-
-    <div class="blog-posts" id="blog-posts"></div>
 
 </section>
 
@@ -350,9 +312,7 @@
 <script src="js/animation.js"></script>
 <script src="js/modal.js"></script>
 <script src="js/team_news.js"></script>
-<script src="js/team_leaders.js"></script>
-<script src="js/team_recipe.js"></script>
-<script src="js/team_blog.js"></script>
+<script src="js/team_portal.js"></script>
 
 </body>
 </html>

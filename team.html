@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教育学部祭 いちにかい企画</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700;900&family=Yomogi&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/team_template.css">
+
+    <script>
+        const QUERY = new URLSearchParams(location.search);
+
+        const TEAM_SLUG =
+            ["meat", "dango", "tofu", "age"].includes(QUERY.get("team"))
+                ? QUERY.get("team")
+                : "meat";
+
+        const PAGE = QUERY.get("page");
+
+        const teamCss = document.createElement("link");
+        teamCss.rel = "stylesheet";
+        teamCss.href = "css/team_" + TEAM_SLUG + ".css";
+        teamCss.onload = teamCss.onerror = () => {
+            document.documentElement.classList.add("is-ready");
+        };
+        document.head.appendChild(teamCss);
+    </script>
+</head>
+
+<body class="team-sub">
+
+<header class="header">
+    <nav class="header__nav">
+        <a href="index.html" class="header__logo">
+            教育学部祭<br>
+            いちにかい企画
+        </a>
+    </nav>
+</header>
+
+<main>
+
+<section class="team-banner">
+
+    <div class="team-banner__nav">
+        <a href="index.html" class="team-banner__back">← トップページ</a>
+        <a href="#" class="team-banner__back" id="back-team">← 班ページへ戻る</a>
+    </div>
+
+    <h1 id="team-name"></h1>
+
+</section>
+
+<section class="section" id="sec-leaders">
+    <div class="section__heading">
+        <h2>班長・副班長紹介</h2>
+    </div>
+    <div class="profile-list" id="leaders-list"></div>
+</section>
+
+<section class="section" id="sec-recipe">
+    <div class="section__heading">
+        <h2>レシピ</h2>
+    </div>
+    <div class="recipe__list" id="recipe-list"></div>
+</section>
+
+<section class="section" id="sec-blog">
+    <div class="section__heading">
+        <h2>看板製作日記</h2>
+    </div>
+    <div class="blog-current" id="blog-current"></div>
+    <div class="blog-posts" id="blog-posts"></div>
+</section>
+
+<section class="section" id="sec-shift">
+    <div class="section__heading">
+        <h2>シフト</h2>
+    </div>
+    <div class="shift-list" id="shift-list"></div>
+</section>
+
+</main>
+
+<div class="news-modal" id="news-modal">
+    <div class="news-modal__content">
+        <button class="news-modal__close" id="news-modal-close">×</button>
+        <p class="news-modal__category"></p>
+        <h2 class="news-modal__title"></h2>
+        <p class="news-modal__date"></p>
+        <p class="news-modal__text"></p>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>教育学部祭 いちにかい企画</p>
+</footer>
+
+<script>
+    const TEAM_NAMES = {
+        meat: "ぐらぐら肉じゃが班",
+        dango: "こねこねだんご班",
+        tofu: "純純純豆腐班",
+        age: "揚げバウム班"
+    };
+
+    const PAGES = ["leaders", "recipe", "blog", "shift"];
+
+    if(!PAGES.includes(PAGE)){
+        location.replace("index_" + TEAM_SLUG + ".html");
+    }
+
+    PAGES.forEach((name) => {
+        if(name !== PAGE){
+            document.querySelector("#sec-" + name).remove();
+        }
+    });
+
+    document.title = TEAM_NAMES[TEAM_SLUG] + " | 教育学部祭 いちにかい企画";
+    document.querySelector("#team-name").textContent = TEAM_NAMES[TEAM_SLUG];
+    document.querySelector("#back-team").href = "index_" + TEAM_SLUG + ".html";
+</script>
+<script src="js/main.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/team_leaders.js"></script>
+<script src="js/team_recipe.js"></script>
+<script src="js/team_blog.js"></script>
+<script src="js/team_shift.js"></script>
+
+</body>
+</html>

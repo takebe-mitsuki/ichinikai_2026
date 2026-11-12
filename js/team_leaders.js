@@ -83,82 +83,28 @@ async function loadTeamLeaders(){
 
 
 
-function displayTeamLeaders(
-    members,
-    container
-){
+function displayTeamLeaders(members, container){
 
+    members.forEach((member) => {
 
-    members.forEach(
-        (member)=>{
+        const card = document.createElement("article");
 
+        card.className =
+            "profile-card" +
+            (member.role === "班長" ? " profile-card--main" : "");
 
-            const card =
-                document.createElement(
-                    "article"
-                );
+        card.innerHTML = `
+            <img src="${member.image}" alt="${member.name}">
+            <div>
+                <span class="profile-card__role">${member.role}</span>
+                <h3>${member.name}</h3>
+                ${member.nickname ? `<p class="profile-card__nickname">${member.nickname}</p>` : ""}
+                <div class="profile-card__text">${member.description}</div>
+            </div>
+        `;
 
+        container.appendChild(card);
 
-            card.className =
-                "leader-card";
-
-
-
-            if(member.role === "班長"){
-
-
-                card.classList.add(
-                    "leader-card--main"
-                );
-
-
-            }
-
-
-
-
-            card.innerHTML = `
-
-                <img
-                    src="${member.image}"
-                    alt="${member.name}"
-                >
-
-
-                <h3>
-
-                    ${member.name}
-
-                </h3>
-
-            `;
-
-
-
-            card.addEventListener(
-
-                "click",
-
-                () => {
-
-
-                    openLeaderModal(
-                        member
-                    );
-
-
-                }
-
-            );
-
-
-
-            container.appendChild(
-                card
-            );
-
-
-        }
-    );
+    });
 
 }

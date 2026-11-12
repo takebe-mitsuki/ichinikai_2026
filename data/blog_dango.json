@@ -1,7 +1,7 @@
 {
     "current": {
-        "image": "images/blog/dango03.jpg",
-        "caption": ""
+        "image": "images/blog/dango05.jpg",
+        "caption": "看板一つ目できました！"
     },
     "posts": [
         {
@@ -20,6 +20,18 @@
             "title": "看板話し合ってます！",
             "images": [
                 "images/blog/dango02.jpg"
+                
+            ],
+            "text": ""
+        },
+        {
+            
+            "date": "2026.11.12",
+            "title": "看板一つ完成しました！",
+            "images": [
+                "images/blog/dango05.jpg",
+                "images/blog/dango06.jpg",
+                "images/blog/dango07.jpg"
                 
             ],
             "text": ""

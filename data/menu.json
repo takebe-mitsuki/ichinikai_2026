@@ -6,7 +6,7 @@
         "items": [
             {
                 "name": "肉じゃが",
-                "price": "...円",
+                "price": "1杯250円",
                 "image": "images/sample.jpg",
                 "description": "coming soon...",
                 "toppings": [""]
@@ -20,7 +20,7 @@
         "items": [
             {
                 "name": "こねこねだんご",
-                "price": "...円",
+                "price": "4個200円",
                 "image": "images/dango/recipe_dango.jpg",
                 "description": "ひとつひとつ粉から手作り！愛情がこもっています！",
                 "toppings": ["味噌だれ", "あんこホイップ", "たこ焼き風"]
@@ -34,7 +34,7 @@
         "items": [
             {
                 "name": "スンドゥブ",
-                "price": "...円",
+                "price": "1杯300円",
                 "image": "images/sample.jpg",
                 "description": "coming soon...",
                 "toppings": []
@@ -48,7 +48,7 @@
         "items": [
             {
                 "name": "揚げバウムクーヘン",
-                "price": "...円",
+                "price": "2個250円",
                 "image": "images/age/recipe.jpg",
                 "description": "色々な味があって愛情が込められています！",
                 "toppings": ["あんこ", "メープル","チョコ","プレーン"]

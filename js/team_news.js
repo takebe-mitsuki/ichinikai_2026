@@ -99,8 +99,10 @@ async function loadTeamNews(){
 
 
 
+               const limit = Number(container.dataset.limit) || 0;
+
         displayTeamNews(
-            sorted.slice(0, 5),
+            limit ? sorted.slice(0, limit) : sorted,
             container
         );
 
@@ -209,21 +211,16 @@ function displayTeamNews(
 
 
 
-            article.addEventListener(
+                      if(!container.dataset.limit){
 
-                "click",
+                article.addEventListener(
+                    "click",
+                    ()=>{
+                        showNewsDetail(news);
+                    }
+                );
 
-                ()=>{
-
-
-                    showNewsDetail(
-                        news
-                    );
-
-
-                }
-
-            );
+            }
 
 
 

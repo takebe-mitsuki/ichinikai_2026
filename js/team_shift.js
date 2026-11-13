@@ -29,11 +29,55 @@ async function loadTeamShift(){
                 ${d.updated ? `<p class="shift-day__updated">更新日時:${d.updated}</p>` : ""}
             </div>
         `).join("");
+        box.querySelectorAll(".shift-day__image").forEach((img) => {
 
+            img.addEventListener("click", () => {
+                openShiftImage(img.src, img.alt);
+            });
+
+        });
     }catch(error){
 
         console.error("Team shift loading error:", error);
 
     }
 
+    function openShiftImage(src, alt){
+
+    const viewer = document.createElement("div");
+
+    viewer.className = "shift-viewer";
+
+    viewer.innerHTML = `
+        <button type="button" class="shift-viewer__close" aria-label="閉じる">✕</button>
+        <div class="shift-viewer__scroll">
+            <img src="${src}" alt="${alt}">
+        </div>
+        <p class="shift-viewer__hint">画像をタップで拡大・縮小 ／ それ以外をタップで閉じる</p>
+    `;
+
+    const onKey = (event) => {
+        if(event.key === "Escape"){ close(); }
+    };
+
+    const close = () => {
+        viewer.remove();
+        document.body.style.overflow = "";
+        document.removeEventListener("keydown", onKey);
+    };
+
+    viewer.querySelector("img").addEventListener("click", (event) => {
+        event.stopPropagation();
+        viewer.classList.toggle("is-zoomed");
+    });
+
+    viewer.addEventListener("click", close);
+
+    document.addEventListener("keydown", onKey);
+
+    document.body.style.overflow = "hidden";
+
+    document.body.appendChild(viewer);
+
+}
 }

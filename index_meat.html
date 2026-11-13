@@ -164,39 +164,24 @@
 
 
 
-<section id="news" class="section">
 
-    <div class="section__heading">
-
-        <h2>
-            お知らせ
-        </h2>
-
-    </div>
-
-
-    <div class="news__list" id="news-list">
-
-    </div>
-
-
-    <div class="news__more">
-
-        <a href="news.html?category=%E8%82%89%E3%81%98%E3%82%83%E3%81%8C" class="news__more-link">
-            お知らせ一覧を見る
-        </a>
-
-    </div>
-
-
-</section>
 
 
 
 <section id="portal" class="section">
 
        <div class="portal-tiles">
+        <a class="news-preview" id="news" data-page="news">
 
+            <div class="section__heading">
+                <h2>お知らせ</h2>
+            </div>
+
+            <div class="news__list" id="news-list" data-limit="3"></div>
+
+            <span class="news-preview__more">お知らせをすべて見る →</span>
+
+        </a>
         <a class="portal-tile" data-page="leaders">
             <img class="portal-tile__image" alt="">
             <span class="portal-tile__label">班長・副班長</span>

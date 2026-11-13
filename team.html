@@ -63,6 +63,13 @@
 
 </section>
 
+<section class="section" id="sec-news">
+    <div class="section__heading">
+        <h2>お知らせ</h2>
+    </div>
+    <div class="news__list" id="news-list"></div>
+</section>
+
 <section class="section" id="sec-leaders">
     <div class="section__heading">
         <h2>班長・副班長紹介</h2>
@@ -116,8 +123,14 @@
         age: "揚げバウム班"
     };
 
-    const PAGES = ["leaders", "recipe", "blog", "shift"];
+        const PAGES = ["news", "leaders", "recipe", "blog", "shift"];
 
+    const TEAM_CATEGORY = {
+        meat: "ぐらぐら肉じゃが",
+        dango: "こねこねだんご",
+        tofu: "純純純豆腐",
+        age: "揚げバウム"
+    }[TEAM_SLUG];
     if(!PAGES.includes(PAGE)){
         location.replace("index_" + TEAM_SLUG + ".html");
     }
@@ -134,6 +147,7 @@
 </script>
 <script src="js/main.js"></script>
 <script src="js/modal.js"></script>
+<script src="js/team_news.js"></script>
 <script src="js/team_leaders.js"></script>
 <script src="js/team_recipe.js"></script>
 <script src="js/team_blog.js"></script>

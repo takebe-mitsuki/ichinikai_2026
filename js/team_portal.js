@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    document.querySelectorAll(".portal-tile").forEach((tile) => {
+    document.querySelectorAll("[data-page]").forEach((tile) => {
 
         const page = tile.dataset.page;
 

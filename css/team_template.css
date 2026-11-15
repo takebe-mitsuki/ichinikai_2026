@@ -1147,3 +1147,16 @@ html.is-ready body.team-sub {
     color: var(--color-accent-dark);
     text-align: right;
 }
+
+.portal-tiles {
+    max-width: 640px;
+}
+
+.news-preview .news__list {
+    max-height: 120px;
+    filter: blur(2px);
+}
+
+.news-preview .news__list::after {
+    height: 48px;
+}

@@ -1,8 +1,18 @@
 {
-    "current": {
-        "image": "images/blog/age03.jpg",
-        "caption": "VIVANT風の看板作ってます！"
-    },
+    "current": [
+        {
+            "image": "images/blog/age03.jpg",
+            "caption": "VIVANT風の看板作ってます！"
+        },
+        {
+            "image": "images/blog/age10.jpg",
+            "caption": "看板もう一つ作ってます！！"
+        },
+        {
+            "image": "images/blog/age09.jpg",
+            "caption": "被り物も製作中です！"
+        }
+    ],
     "posts": [
         {
             
@@ -26,6 +36,29 @@
                 
             ],
             "text": "VIVANT風の看板作ってます！"
+        },
+        {
+            
+            "date": "2026.11.12",
+            "title": "看板もう一つ作ってます！！",
+            "images": [
+                "images/blog/age06.jpg",
+                "images/blog/age07.jpg",
+                "images/blog/age12.jpg",
+                "images/blog/age13.jpg"
+            ],
+            "text": "看板以外も進んでいます！"
+        },
+        {
+            
+            "date": "2026.11.13",
+            "title": "看板と被り物作りました！",
+            "images": [
+                "images/blog/age08.jpg",
+                "images/blog/age09.jpg",
+                "images/blog/age10.jpg"
+            ],
+            "text": ""
         }
     ]
 }

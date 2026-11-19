@@ -4,12 +4,36 @@
         {
             "title": "マニュアル",
             "folder": "images/docs/manual/",
-            "count": 20,
-            "ext": "jpg",
+            "count": 18,
+            "ext": "png",
             "rtl": false,
             "toc": [
-                { "title": "はじめに", "page": 2 },
-                { "title": "当日の流れ", "page": 5 }
+                 { "title": "表紙", "page": 1 },
+                { "title": "肉じゃが・だんご配置図", "page": 2 },
+                { "title": "スンドゥブ・揚げバウム配置図", "page": 3 },
+                { "title": "肉じゃが工程表", "page": 4 },
+                { "title": "だんご工程表", "page": 5 },
+                { "title": "スンドゥブ工程表", "page": 6 },
+                { "title": "揚げバウム工程表", "page": 7 },
+                { "title": "会計マニュアル", "page": 8 },
+                { "title": "肉じゃが1日目シフト", "page": 11 },
+                { "title": "肉じゃが2日目シフト", "page": 12 },
+                { "title": "だんご1日目シフト", "page": 13 },
+                { "title": "だんご2日目シフト", "page": 14 },
+                { "title": "スンドゥブ1日目シフト", "page": 15 },
+                { "title": "スンドゥブ2日目シフト", "page": 16 },
+                { "title": "揚げバウム1日目シフト", "page": 17 },
+                { "title": "揚げバウム2日目シフト", "page": 18 }
+            ]
+        },
+        {
+            "title": "ゴミ分別マニュアル",
+            "folder": "images/docs/gomi/",
+            "count": 16,
+            "ext": "png",
+            "rtl": false,
+            "toc": [
+
             ]
         },
         {
